@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>English Proficiency Guide</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    .hero-section {
+      background-color: #6c47ff; /* Purple background */
+      color: white;
+      text-align: center;
+      padding: 90px 20px 30px;
+      position: relative;
+    }
+
+    .hero-section h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .hero-section small {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .guide-banner {
+      margin-top: -15px;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .guide-banner img {
+      padding-top: 5px;
+      border-radius: 12px;
+      height: 350px;
+      width: 900px;
+    }
+
+    .guide-banner .row {
+      align-items: center;
+    }
+    .blog-section {
+      background-color: #eae6fd; /* Same as your image's background */
+    }
+    .blog-card {
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .blog-card:hover {
+      transform: scale(1.02);
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .narrow-container {
+    max-width: 750px; /* or 800px, adjust as needed */
+    margin: 0 auto;
+    }
+    body {
+      padding-top: 25px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    /* Footer section */
+    footer {
+      background-color: #1e1e1e;
+      color: #fff;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    footer h6 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    footer ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    footer ul li {
+      margin-bottom: 6px;
+      color: #ccc;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    footer .form-control,
+    footer .form-select {
+      border-radius: 0.25rem;
+      border: none;
+    }
+
+    footer .btn-warning {
+      font-weight: 600;
+      background-color: #f5a623;
+      border: none;
+    }
+
+    footer .btn-warning:hover {
+      background-color: #d48806;
+    }
+
+    /* Footer social icons */
+    footer .bi {
+      font-size: 1.25rem;
+      transition: color 0.3s ease;
+    }
+
+    footer .bi:hover {
+      color: #f5a623;
+    }
+
+    /* Responsive logo strip */
+    footer .d-flex img {
+      max-height: 40px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Navbar -->
+<nav class="navbar bg-dark navbar-expand-lg fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="#">
+      <img src="images/logo6.png" alt="UKCoSA Logo" height="55" width="70" class="me-2">
+      UKCoSA Global
+    </a>
+
+    <!-- Search (Large only) -->
+    <div class="d-none d-lg-block me-3 position-relative" style="width: 220px;">
+      <input class="form-control search-bar" id="serviceSearch" type="text" placeholder="Search services..." aria-label="Search" autocomplete="off">
+      <ul id="suggestions" class="list-group position-absolute w-100" style="z-index: 1000;"></ul>
+    </div>
+
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-1"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item mx-1"><a class="nav-link text-white" href="about.html">About Us</a></li>
+        <li class="nav-item dropdown mx-1">
+      <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+      <ul class="dropdown-menu bg-dark">
+        <li><a class="dropdown-item text-white" href="study-abroad.html">Study Abroad Counseling</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#t1">Test Preparation</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#aa">Application Assistance</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#vg">Visa Guidance</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#pa">Post-Arrival Services</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#ela">Education-Loan Assistance</a></li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown mx-1">
+      <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">Destinations</a>
+      <ul class="dropdown-menu bg-dark">
+        <li><a class="dropdown-item text-white" href="usa.html">USA</a></li>
+        <li><a class="dropdown-item text-white" href="uk.html">UK</a></li>
+        <li><a class="dropdown-item text-white" href="canada.html">Canada</a></li>
+        <li><a class="dropdown-item text-white" href="australia.html">Australia</a></li>
+        <li><a class="dropdown-item text-white" href="europe.html">Europe</a></li>
+      </ul>
+    </li>
+    <li class="nav-item mx-1"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+    <li class="nav-item mx-1"><a class="nav-link text-white" href="contact_us.html">Contact Us</a></li>
+    <li class="nav-item mx-1" style="padding-left: 10px;">
+      <a class="btn btn-primary text-white" href="#">Student Registration</a>
+    </li>
+  </ul>
+</div>
+
+</div>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <small>Blog • Detail Blog</small>
+      <h1>Top 10 Things You Learn While Studying Abroad - Beyond</h1>
+      <div class="text-white-50">May 27, 2025</div>
+    </div>
+  </section>
+
+  <!-- Guide Banner Section -->
+   <section style="background-image: url('images/blog_bg.avif'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <section class="guide-banner">
+    <div class="container justify-content-end">
+      <div class="">
+        <img src="images/blog_3.jpg" alt="Top English Proficiency Tests" class="img-fluid justify-content-center">
+        <!-- Replace src with the actual path if needed -->
+      </div>
+    </div>
+    <hr style="
+  border: none;
+  height: 4px;
+  background-color: white;
+  box-shadow: 0 0 8px white;
+">
+
+
+  <div class="container py-5 text-white">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <h1 class="text-center mb-4 section-title"><u>Discovering Life Beyond Classrooms: What Studying Abroad Truly Teaches You</u></h1>
+        <br>
+        <p class="lead">
+          Stepping onto a plane with a suitcase full of dreams and a heart full of questions—isn’t that what studying abroad often feels like?
+          The anxiety of the unknown blends with the thrill of new beginnings. But this leap of faith goes far beyond lectures and exams.
+          It’s about discovering life in its raw, vibrant, and sometimes chaotic form.
+        </p>
+        <p>
+          Yes, professors will guide your academic path, but it’s the streets, strangers, and struggles that end up becoming your greatest teachers.
+          This blog unveils the <span class="highlight">top 10 transformative lessons</span> that studying abroad instills—lessons that won’t appear on your degree, but will echo in your personality forever.
+        </p>
+        <br>
+
+        <h2 class="section-title"><u>Top 10 Life-Changing Lessons You Learn While Studying Abroad</u></h2>
+        <br>
+        <br>
+
+        <h4 class="point-title">1. Adaptability is Your Superpower</h4>
+        <p>
+          Unfamiliar cities, changing schedules, language barriers—studying abroad challenges your ability to adjust at every turn.
+          But soon, adapting becomes second nature. This ability to stay composed in uncertain environments sharpens your emotional strength,
+          making you a <span class="highlight">problem-solver, not a complainer</span>—a skill that benefits you for life.
+        </p>
+        <br>
+
+        <h4 class="point-title">2. Budgeting Becomes an Art</h4>
+        <p>
+          Being in charge of your finances teaches you more than any financial literacy course. From converting currencies mid-shopping to tracking every coffee spend,
+          you learn to <span class="highlight">balance needs and wants</span>. Many students even explore investments or part-time earnings,
+          discovering financial responsibility early on.
+        </p>
+        <br>
+
+        <h4 class="point-title">3. Cultural Intelligence Takes the Lead</h4>
+        <p>
+          When your peers come from different continents, every interaction becomes a lesson in culture. You begin to <span class="highlight">understand perspectives,
+          decode gestures</span>, and celebrate diversity. This global sensitivity becomes a powerful tool in both social and professional settings.
+        </p>
+        <br>
+
+        <h4 class="point-title">4. Your Network Becomes a Global Asset</h4>
+        <p>
+          Late-night projects, city explorations, and dorm room discussions often lead to <span class="highlight">life-long friendships and professional relationships</span>.
+          Studying abroad creates a web of connections that no local classroom can replicate.
+        </p>
+        <br>
+
+        <h4 class="point-title">5. Time Management Turns Into a Lifestyle</h4>
+        <p>
+          Abroad, your schedule isn’t just filled with lectures. There’s travel, part-time work, campus events, and spontaneous adventures.
+          Learning to balance it all shapes you into someone who can <span class="highlight">plan, prioritize, and perform</span>—without burning out.
+        </p>
+        <br>
+
+        <h4 class="point-title">6. Communication Goes Beyond Words</h4>
+        <p>
+          Explaining yourself across language barriers and cultural nuances sharpens your communication in ways you never imagined.
+          You’ll learn to <span class="highlight">speak simply, listen better, and convey clearly</span>—a must-have trait in any career or relationship.
+        </p>
+        <br>
+
+        <h4 class="point-title">7. Independence Fuels Confidence</h4>
+        <p>
+          Living away from family forces you to handle things on your own—meals, bills, travel, and homesickness.
+          These little victories—like <span class="highlight">cooking dinner or navigating a foreign subway</span>—build the self-reliance that gradually turns into unshakable confidence.
+        </p>
+        <br>
+
+        <h4 class="point-title">8. You Grow Practically Smart</h4>
+        <p>
+          From negotiating at local markets to quickly adjusting when plans fail, you become street-smart.
+          Studying abroad teaches you to <span class="highlight">think fast, act wisely</span>, and embrace unpredictability—a priceless life skill.
+        </p>
+        <br>
+
+        <h4 class="point-title">9. Patience and Resilience are Constant Companions</h4>
+        <p>
+          Homesickness, visa issues, academic stress—there will be hurdles. But you learn to persist. You develop <span class="highlight">emotional endurance</span>
+          that helps you handle failures and frustrations with grace.
+        </p>
+        <br>
+
+        <h4 class="point-title">10. Your Mindset Turns Global</h4>
+        <p>
+          Studying abroad transforms your worldview. You stop seeing the world through a single cultural lens and start appreciating diversity in ideas, values, and lifestyles.
+          This <span class="highlight">global outlook</span> helps you collaborate better and <span class="highlight">excel in any international setting</span>.
+        </p>
+        <br>
+        <br>
+
+        <h2 class="section-title"><u>Study Abroad with UKCoSA Global: Grow Beyond Borders</u></h2>
+        <p>
+          Studying abroad isn’t just about earning a degree in another country. It’s a personal revolution—a story of transformation, growth, and bold new beginnings.
+          At <span class="highlight">UKCoSA Global</span>, we help you take that first step toward becoming a global citizen.
+          From choosing the right university to getting your visa and settling in abroad, our expert guidance ensures your journey is smooth and rewarding.
+        </p>
+        <br>
+
+        <h2 class="section-title"><u>Frequently Asked Questions (FAQs)</u></h2>
+
+        <p><span class="faq-question">1. What personal skills will I gain from studying abroad?</span><br>
+        You’ll develop adaptability, budgeting habits, time management, cultural intelligence, and communication skills that are critical for personal and professional success.</p>
+
+        <p><span class="faq-question">2. How does studying abroad support my professional journey?</span><br>
+        It provides global exposure, encourages problem-solving, builds confidence, and connects you with international industry networks.</p>
+
+        <p><span class="faq-question">3. Does studying abroad improve career opportunities?</span><br>
+        Yes. Employers value international experience, practical skills, and the ability to thrive in diverse environments. These qualities boost your global career prospects.</p>
+
+        <p><span class="faq-question">4. Will I be able to build a strong network abroad?</span><br>
+        Absolutely. You'll build a global network of peers, professors, and professionals, which can lead to career opportunities and collaborations later in life.</p>
+
+        <p><span class="faq-question">5. What are the main benefits of studying abroad?</span><br>
+        You’ll gain world-class education, learn life skills, build confidence, experience diverse cultures, and broaden your perspectives—making you future-ready.</p>
+      </div>
+    </div>
+  </div>
+  </section>
+  </section>
+
+<!-- All Blogs Section -->
+  <section class="py-5 blog-section">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">All Blogs</h2>
+      <div class="row g-4">
+        
+        <!-- Blog 1 -->
+        <div class="col-md-4">
+          <div class="card blog-card h-100" onclick="window.location.href='blog1.html'">
+            <img src="images/nos.webp" class="card-img-top" alt="New York Universities">
+            <div class="card-body">
+              <h6 class="text-primary fw-bold">STUDY ABROAD</h6>
+              <h5 class="card-title">National Overseas Scholarship: A Gateway for Tribal Students ...</h5>
+              <p class="card-text text-muted"> 
+Every great dream deserves a chance to become reality. For countless ambitious students from India’s Scheduled Tribes (ST) and ...</p>
+              <p class="text-secondary">May 29, 2025</p>
+              <a href="blog1.html" class="btn btn-outline-primary mt-2">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="col-md-4">
+          <div class="card blog-card h-100" onclick="window.location.href='blog2.html'">
+            <img src="images/english.webp" class="card-img-top" alt="Part-Time in Ireland">
+            <div class="card-body">
+              <h6 class="text-primary fw-bold">STUDY ABROAD</h6>
+              <h5 class="card-title">Top English Proficiency Tests for Studying Abroad: A Detailed...</h5>
+              <p class="card-text text-muted">English proficiency tests have become an integral part of the educational and professional journey for countless individuals...</p>
+              <p class="text-secondary">May 29, 2025</p>
+              <a href="blog2.html" class="btn btn-outline-primary mt-2">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog 3 -->
+        <div class="col-md-4">
+          <div class="card blog-card h-100" onclick="window.location.href='blog3.html'">
+            <img src="images/blog_3.jpg" class="card-img-top" alt="US Universities without GRE">
+            <div class="card-body">
+              <h6 class="text-primary fw-bold">STUDY ABROAD</h6>
+              <h5 class="card-title">Top 10 Things You Learn While Studying Abroad - Beyond...</h5>
+              <p class="card-text text-muted">Beyond the textbooks and lecture halls lies a world of discovery waiting for those brave enough to study abroad. Remember the...</p>
+              <p class="text-secondary">May 27, 2025</p>
+              <a href="blog3.html" class="btn btn-outline-primary mt-2">Read More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ <section class="py-5 bg-light">
+  <div class="container narrow-container text-center">
+    <h2 class="mb-5"><u>UKCoSA Global in the News</u></h2>
+    <div class="row gx-0 gy-2 justify-content-center">
+      <!-- Row 1 -->
+      <div class="col-3">
+        <img src="images/pie.svg" class="img-fluid w-100" style="max-height: 60px;" alt="The PIE News">
+      </div>
+      <div class="col-3">
+        <img src="images/vc.svg" class="img-fluid w-100" style="max-height: 60px;" alt="VCCircle">
+      </div>
+      <div class="col-3">
+        <img src="images/business.svg" class="img-fluid w-100" style="max-height: 60px;" alt="Business Standard">
+      </div>
+      <div class="col-3">
+        <img src="images/money.svg" class="img-fluid w-100" style="max-height: 60px;" alt="Moneycontrol">
+      </div>
+
+      <!-- Row 2 -->
+      <div class="col-3">
+        <img src="images/story.svg" class="img-fluid w-100" style="max-height: 60px;" alt="YourStory">
+      </div>
+      <div class="col-3">
+        <img src="images/pie.svg" class="img-fluid w-100" style="max-height: 60px;" alt="The PIE News">
+      </div>
+      <div class="col-3">
+        <img src="images/mint.svg" class="img-fluid w-100" style="max-height: 60px;" alt="Mint">
+      </div>
+      <div class="col-3">
+        <img src="images/pie.svg" class="img-fluid w-100" style="max-height: 60px;" alt="The PIE News">
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container text-md-start text-center">
+    <div class="row">
+
+      <!-- Newsletter Signup -->
+      <div class="col-12 mb-4 text-center">
+        <h5 class="fw-bold mb-3">Stay updated with UKCoSA Global</h5>
+        <div class="row justify-content-center">
+          <div class="col-md-3 mb-2">
+            <input type="email" class="form-control" placeholder="Email ID" />
+          </div>
+          <div class="col-md-3 mb-2">
+            <select class="form-select">
+              <option selected disabled>I'm Interested in</option>
+              <option>Studying Abroad</option>
+              <option>Test Prep</option>
+              <option>Application Assistance</option>
+              <option>Visa Guidance</option>
+              <option>Post-Arrival Services</option>
+              <option>Education-Loan Assistance</option>
+            </select>
+          </div>
+          <div class="col-md-2 mb-2">
+            <button class="btn btn-warning w-100">Register Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- About & Links -->
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold"><u>About UKCoSA Global</u></h6>
+        <p><small>
+          We are a rapidly expanding EdTech company with a global presence, streamlining international student recruitment by bridging students, education consultants, and universities worldwide through our advanced digital platform – coursefinder.ai.
+        </small>
+        </p>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Study Destinations</h6>
+        <ul class="list-unstyled small">
+          <li><a href="usa.html">United States</a></li>
+          <li><a href="canada.html">Canada</a></li>
+          <li><a href="uk.html">United Kingdom</a></li>
+          <li><a href="australia.html">Australia</a></li>
+          <li><a href="europe.html">Europe</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Services for Students</h6>
+        <ul class="list-unstyled small">
+          <li><a href="study-abroad.html">Counselling</a></li>
+          <li><a href="study-abroad.html#t1">Test Preparation</a></li>
+          <li><a href="study-abroad.html#aa">Application & Admission</a></li>
+          <li><a href="study-abroad.html#vg">Visa Processing</a></li>
+          <li><a href="study-abroad.html#ela">Education-Loan</a></li>
+          <li><a href="study-abroad.html#pa">Post-Arrival Services</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Company</h6>
+        <ul class="list-unstyled small">
+          <li>About Us</li>
+          <li>Careers <span class="badge bg-primary">We're Hiring!</span></li>
+          <li>News & Events</li>
+          <li>CSR Policy</li>
+          <li>POSH Policy</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Accreditation Logos -->
+    <div class="text-center mt-4 mb-3">
+      <h5 class="fw-bold"><u>Global Accreditations & Recognitions</u></h5>
+      <div class="d-flex justify-content-center gap-4 flex-wrap mt-5 mb-2">
+        <img src="images/axis-bank.png.webp" alt="Accreditation 1" height="40" />
+        <img src="images/hdfc.png" alt="PIER" height="40" />
+        <img src="images/duolingo.webp" alt="AAERI" height="40" />
+        <img src="images/upgrad.webp" alt="Education UK" height="40" />
+        <img src="images/flywire.png" alt="Other Accred" height="40" />
+        <img src="images/pte.png" alt="Other Accred" height="40" />
+      </div>
+    </div>
+
+    <!-- Social & Legal -->
+    <div class="container mt-4 border-top pt-3">
+      <div class="row align-items-center">
+        <!-- Centered copyright -->
+        <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <div class="small">Copyright © UKCoSA Global 2004–2025</div>
+        </div>
+
+        <!-- Right-aligned social icons -->
+        <div class="col-12 col-md-6 text-center text-md-end">
+          <a href="https://www.facebook.com/ukcosaglobal" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/ukcosaglobal/" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com/ukcosaglobal/" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+          <a href="https://x.com/ukcosaglobal" class="text-white"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const services = [
+    { name: "Study-abroad Counselling", link: "study-abroad.html" },
+    { name: "Test Preparation", link: "study-abroad.html#t1" },
+    { name: "Application Assistance", link: "study-abroad.html#aa" },
+    { name: "Visa Guidance", link: "study-abroad.html#vg" },
+    { name: "Post-Arrival Services", link: "study-abroad.html#pa" },
+    { name: "Education Loan Assistance", link: "study-abroad.html#ela" }
+  ];
+
+  const input = document.getElementById("serviceSearch");
+  const suggestionsBox = document.getElementById("suggestions");
+  let currentFocus = -1; // Index of focused suggestion
+
+  input.addEventListener("input", function () {
+    const val = this.value.trim().toLowerCase();
+    suggestionsBox.innerHTML = "";
+    currentFocus = -1;
+
+    if (val === "") return;
+
+    const filtered = services.filter(service => service.name.toLowerCase().startsWith(val));
+
+    filtered.forEach((service, index) => {
+      const li = document.createElement("li");
+      li.classList.add("list-group-item", "list-group-item-action");
+      li.textContent = service.name;
+      li.setAttribute("data-link", service.link);
+      li.style.cursor = "pointer";
+      li.onclick = () => window.location.href = service.link;
+      suggestionsBox.appendChild(li);
+    });
+  });
+
+  input.addEventListener("keydown", function (e) {
+    const items = suggestionsBox.getElementsByTagName("li");
+
+    if (e.key === "ArrowDown") {
+      currentFocus++;
+      addActive(items);
+    } else if (e.key === "ArrowUp") {
+      currentFocus--;
+      addActive(items);
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (currentFocus > -1 && items[currentFocus]) {
+        items[currentFocus].click();
+      } else {
+        // If typed text matches exactly
+        const match = services.find(service => service.name.toLowerCase() === input.value.trim().toLowerCase());
+        if (match) window.location.href = match.link;
+      }
+    }
+  });
+
+  function addActive(items) {
+    if (!items) return;
+    removeActive(items);
+    if (currentFocus >= items.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = items.length - 1;
+    items[currentFocus].classList.add("active");
+  }
+
+  function removeActive(items) {
+    for (let i = 0; i < items.length; i++) {
+      items[i].classList.remove("active");
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+    if (!input.contains(e.target)) {
+      suggestionsBox.innerHTML = "";
+      currentFocus = -1;
+    }
+  });
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

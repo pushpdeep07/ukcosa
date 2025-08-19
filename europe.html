@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Study in Europe | UKCoSA Global</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    body{
+      padding-top: 30px;
+    }
+    .hero-section {
+      background-image: url('images/p2.jpg'); /* Add high-quality USA building image */
+      background-size: cover;
+      background-position: right center;
+      color: rgb(14, 11, 11);
+      padding: 40px 100px;
+      min-height: 80vh;
+      display: flex;
+      align-items: top;
+    }
+
+    .hero-overlay {
+      padding: 40px 90px;
+      border-radius: 10px;
+    }
+
+    .highlight-section {
+      background-color: #f7ffcc; /* Light green */
+      padding: 60px 20px;
+    }
+
+    .study-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Footer section */
+    footer {
+      background-color: #1e1e1e;
+      color: #fff;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    footer h6 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    footer ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    footer ul li {
+      margin-bottom: 6px;
+      color: #ccc;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    footer .form-control,
+    footer .form-select {
+      border-radius: 0.25rem;
+      border: none;
+    }
+
+    footer .btn-warning {
+      font-weight: 600;
+      background-color: #f5a623;
+      border: none;
+    }
+
+    footer .btn-warning:hover {
+      background-color: #d48806;
+    }
+
+    /* Footer social icons */
+    footer .bi {
+      font-size: 1.25rem;
+      transition: color 0.3s ease;
+    }
+
+    footer .bi:hover {
+      color: #f5a623;
+    }
+
+    /* Responsive logo strip */
+    footer .d-flex img {
+      max-height: 40px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Navbar -->
+<nav class="navbar bg-dark navbar-expand-lg fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="#">
+      <img src="images/logo6.png" alt="UKCoSA Logo" height="55" width="70" class="me-2">
+      UKCoSA Global
+    </a>
+
+    <!-- Search (Large only) -->
+    <div class="d-none d-lg-block me-3 position-relative" style="width: 220px;">
+      <input class="form-control search-bar" id="serviceSearch" type="text" placeholder="Search services..." aria-label="Search" autocomplete="off">
+      <ul id="suggestions" class="list-group position-absolute w-100" style="z-index: 1000;"></ul>
+    </div>
+
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-1"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item mx-1"><a class="nav-link text-white" href="about.html">About Us</a></li>
+        <li class="nav-item dropdown mx-1">
+      <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+      <ul class="dropdown-menu bg-dark">
+        <li><a class="dropdown-item text-white" href="study-abroad.html">Study Abroad Counseling</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#t1">Test Preparation</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#aa">Application Assistance</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#vg">Visa Guidance</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#pa">Post-Arrival Services</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#ela">Education-Loan Assistance</a></li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown mx-1">
+      <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">Destinations</a>
+      <ul class="dropdown-menu bg-dark">
+        <li><a class="dropdown-item text-white" href="usa.html">USA</a></li>
+        <li><a class="dropdown-item text-white" href="uk.html">UK</a></li>
+        <li><a class="dropdown-item text-white" href="canada.html">Canada</a></li>
+        <li><a class="dropdown-item text-white" href="australia.html">Australia</a></li>
+        <li><a class="dropdown-item text-white" href="europe.html">Europe</a></li>
+      </ul>
+    </li>
+    <li class="nav-item mx-1"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+    <li class="nav-item mx-1"><a class="nav-link text-white" href="contact_us.html">Contact Us</a></li>
+    <li class="nav-item mx-1" style="padding-left: 10px;">
+      <a class="btn btn-primary text-white" href="#">Student Registration</a>
+    </li>
+  </ul>
+</div>
+
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="hero-overlay">
+          <h1 class="display-5 fw-bold "> Study in Europe</h1>
+          <p class="mt-4 fw-semibold">At UKCoSA Global, we believe education knows no boundaries. Europe, home to some of the world's oldest and most prestigious universities, is fast becoming a top destination for international students. With a blend of academic excellence, cultural diversity, and career opportunities, studying in Europe opens doors to a truly transformative experience. Whether you're looking for world-class research, affordable tuition, or the chance to explore multiple countries, Europe offers an unparalleled environment for personal and professional growth.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Study in USA Section -->
+<section class="highlight-section">
+  <div class="container">
+    <h2 class="text-center mb-5">Why Study in Europe?</h2>
+
+    <!-- Point 1 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <h4>1. World-Class Education and Globally Recognized Degrees</h4>
+        <p>Moreover, European universities offer a vast range of programs in English, especially at the postgraduate level. This allows students from non-European countries to receive a high-quality education without the language barrier. From engineering and data science to art history and psychology, Europe provides academic opportunities in virtually every discipline.</p>
+        <p>Moreover, European universities offer a vast range of programs in English, especially at the postgraduate level. This allows students from non-European countries to receive a high-quality education without the language barrier. From engineering and data science to art history and psychology, Europe provides academic opportunities in virtually every discipline.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="images/europe.png" alt="Top USA Universities" class="study-img" style="height: 250px; width: 450px; border: 3px solid black;" />
+      </div>
+
+    </div>
+    <br>
+    <br>
+
+    <!-- Point 2 -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-6">
+        <h4>2. Affordable Tuition and Scholarship Opportunities</h4>
+        <p>Compared to countries like the USA and Australia, many European nations offer significantly lower tuition fees — and in some countries like Germany or Norway, education is almost free even for international students. Public universities often charge minimal fees while maintaining top-notch academic standards.</p>
+        <p>In addition, numerous scholarships are available for international students, funded by governments, the EU (e.g., Erasmus+), or the universities themselves. These financial aids cover tuition, living expenses, or both, making Europe a cost-effective option for a world-class education.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="images/tution.jpg" alt="Flexible Courses in USA" class="study-img" style="height: 250px; width: 450px; border: 3px solid black;"/>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- Point 3 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <h4>3. Cultural Diversity and International Networking</h4>
+        <p>Europe is a mosaic of cultures, languages, and traditions. Studying here provides a unique opportunity to immerse yourself in rich cultural experiences — from the food and festivals to historical landmarks and multilingual communities. This diversity enriches your worldview and helps develop soft skills such as adaptability and global communication.</p>
+        <p>On top of that, Europe's international student population is growing rapidly. You'll meet peers from every corner of the world, creating a global network of friends and professional contacts. These connections can be invaluable throughout your career, opening up opportunities in multinational companies and global research collaborations.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="images/cult_euro.jpg" alt="Top USA Universities" class="study-img" style="height: 250px; width: 450px; border: 3px solid black;" />
+      </div>
+
+    </div>
+    <br>
+    <br>
+
+    <!-- Point 4 -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-6">
+        <h4>4. Freedom to Travel Across Europe</h4>
+        <p>One of the most exciting advantages of studying in Europe is the ability to travel across 27+ countries in the Schengen Area without additional visas. Weekend trips to cities like Paris, Rome, Berlin, or Prague are not only possible but affordable due to budget airlines and efficient rail networks.</p>
+        <p>This freedom to explore helps students broaden their horizons beyond academics. Exposure to different societies, historical landmarks, and real-world contexts deepens your education and personal development. Traveling also enhances your adaptability, independence, and cultural awareness — skills highly valued by global employers.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="images/travel.avif" alt="Flexible Courses in USA" class="study-img" style="height: 250px; width: 450px; border: 3px solid black;"/>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- Point 5 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <h4>5. Post-Study Work Opportunities and Career Prospects</h4>
+        <p>Europe offers robust post-study work options, especially in countries like Germany, France, Netherlands, and Ireland. Most countries allow international graduates to stay back for 1–2 years to find employment after completing their degrees. With Europe being home to thousands of multinational companies, research labs, and startups, graduates have access to diverse career paths.</p>
+        <p>European education also emphasizes practical experience through internships, research projects, and industry linkages. Universities often collaborate with companies to ensure students graduate with real-world skills. This makes Europe not just a place to study, but a launchpad for your global career.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="images/post_euro.png" alt="Top USA Universities" class="study-img" style="height: 250px; width: 450px; border: 3px solid black;" />
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section style="background-color: rgb(231, 192, 199); padding: 50px 0;">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold">Popular Universities in Europe</h2>
+    <div class="row g-4">
+      <!-- Row 1 -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/srh.svg" alt="UConn" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">SRH University, Berlin, Hamburg, Leipzig, Dresden, Munich and Heidelberg Campuses</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/wittenborg.svg" alt="Johns Hopkins" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">Wittenborg University of Applied Sciences, Amsterdam and Apeldoorn Campus</p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/inseec.png" alt="ASU" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">INSEEC Business School, Paris</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/esce.png" alt="UMass" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">ESCE International Business School, Paris</p>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/hyper.png" alt="UCR" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">Hyper Island University, Stockholm</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/halmstad'.svg" alt="Virginia Tech" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">Halmstad University, Halmstad</p>
+        </div>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/ase.png" alt="USF" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">University of Applied Sciences Europe, Amsterdam</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/turku.png" alt="UArizona" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">Turku University of Applied Sciences, Turku</p>
+        </div>
+      </div>
+
+      <!-- Row 5 -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/iu.svg" alt="Drexel" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">International University of Applied Sciences, Berlin and Bad Honnef</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/sdu.png" alt="Delaware" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">University of Southern Denmark, Odense and Sonderborg Campus</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5" style="background-color: #f8f9fa; overflow-x: hidden;">
+  <div class="container position-relative" style="max-width: 1140px;">
+    <h2 class="text-center fw-bold mb-5">👩‍🎓 What our Sudents say about us 👨‍🎓</h2>
+    <div id="successStoriesCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Gujarat to the University of Bristol 🇬🇧</strong></p>
+                  <p>"UKCoSA Global gave me an opportunity that once felt impossible — a chance to study abroad and truly pursue my dreams."</p>
+                  <p>I’m Manish Vaghela, coming from a humble background in Gujarat, India. As the first in my family to study internationally, this journey has been nothing short of transformative.</p>
+                  <p>Thanks to the unwavering support and personalised guidance from UKCoSA Global, I am now pursuing an MSc in Engineering with Management at the prestigious University of Bristol — and that too with a Fully Funded Government of India Scholarship.</p>
+                  <p>Words fall short when I say — Ravi Saxena sir is like God for me. He went above and beyond to support me when I needed it the most. 🙏</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Buxar, Bihar to a Fully Funded Scholarship in the UK 🇬🇧</strong></p>
+                  <p>I’m Abid Hassan from Buxar, Bihar, and I’m incredibly thankful to UKCoSA Global for guiding me through every step of my journey to studying abroad.</p>
+                  <p>From handling the complex admission process to supporting me in securing a Fully Funded Government Scholarship, their expert guidance made everything smooth and stress-free.</p>
+                  <p>I’m now pursuing MSc Management (CSR and Sustainability) at a top UK university — something I once thought was beyond my reach.<br>UKCoSA Global made it possible through their dedication, patience, and step-by-step support.</p>
+                  <p>Thank you to the entire team, especially for making this life-changing opportunity a reality.🙏</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Delhi to the University of Bristol 🇬🇧</strong></p>
+                  <p>I’m Karan from Delhi, and I’m thrilled to share that I’ve achieved my dream of studying at the prestigious University of Bristol 🇬🇧 — all thanks to UKCoSA Global and my mentor’s incredible support.</p>
+                  <p>From guiding me through the admission process to helping me secure a Fully Funded Scholarship, their step-by-step assistance made my entire journey smooth, stress-free, and empowering.</p>
+                  <p>Today, I’m proudly pursuing an MSc in Engineering and Management, and this life-changing opportunity wouldn’t have been possible without the unwavering support of UKCoSA Global.</p>
+                  <p>Thank you for believing in me and helping turn my dream into reality.🙏🎓</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Buxar, Bihar to a Fully Funded Scholarship in the UK 🇬🇧</strong></p>
+                  <p>I’m Abid Hassan from Buxar, Bihar, and I’m incredibly thankful to UKCoSA Global for guiding me through every step of my journey to studying abroad.</p>
+                  <p>From handling the complex admission process to supporting me in securing a Fully Funded Government Scholarship, their expert guidance made everything smooth and stress-free.</p>
+                  <p>I’m now pursuing MSc Management (CSR and Sustainability) at a top UK university — something I once thought was beyond my reach.<br>UKCoSA Global made it possible through their dedication, patience, and step-by-step support.</p>
+                  <p>Thank you to the entire team, especially for making this life-changing opportunity a reality. 🙏</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Delhi to the University of Bristol 🇬🇧</strong></p>
+                  <p>I’m Karan from Delhi, and I’m thrilled to share that I’ve achieved my dream of studying at the prestigious University of Bristol 🇬🇧 — all thanks to UKCoSA Global and my mentor’s incredible support.</p>
+                  <p>From guiding me through the admission process to helping me secure a Fully Funded Scholarship, their step-by-step assistance made my entire journey smooth, stress-free, and empowering.</p>
+                  <p>Today, I’m proudly pursuing an MSc in Engineering and Management, and this life-changing opportunity wouldn’t have been possible without the unwavering support of UKCoSA Global.</p>
+                  <p>Thank you for believing in me and helping turn my dream into reality.🙏🎓</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Nagpur to Imperial College London 🇬🇧</strong></p>
+                  <p>I’m Prachi from Nagpur, and I feel honoured to share that I’ve turned my dream of studying at the globally renowned Imperial College London 🇬🇧 into a reality — all thanks to UKCoSA Global and the sincere mentorship I received.</p>
+                  <p>Their step-by-step guidance throughout the admission process and scholarship application helped me secure the prestigious Rajarshi Shahu Maharaj Scholarship by the Government of Maharashtra, fully funding my education.</p>
+                  <p>Today, I’m pursuing my dream with confidence, and this journey would’ve been impossible without their unwavering support.</p>
+                  <p>Thank you, Ravi Sir, for mentoring me like family and helping me reach where I am today. 🙏🎓</p>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls (arrows moved out by -150px) -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#successStoriesCarousel" data-bs-slide="prev"
+        style="position: absolute; top: 50%; left: -170px; transform: translateY(-50%); z-index: 10;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"
+          style="background-color: #000; padding: 15px; border-radius: 50%;"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#successStoriesCarousel" data-bs-slide="next"
+        style="position: absolute; top: 50%; right: -170px; transform: translateY(-50%); z-index: 10;">
+        <span class="carousel-control-next-icon" aria-hidden="true"
+          style="background-color: #000; padding: 15px; border-radius: 50%;"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="py-5" style="background-color: #aebbd4;">
+  <div class="container d-flex justify-content-center">
+    <div class="w-100" style="max-width: 800px;">
+      <h2 class="text-center fw-bold mb-4">FAQs About Studying in Europe</h2>
+
+      <div class="accordion" id="kcFaqAccordion">
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false">
+              Do I need to learn a European language to study there?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+             No, many universities offer programs entirely in English, especially master's courses. However, learning the local language can enhance your experience and job prospects.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false">
+              Which European countries offer free or low-cost education?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+              Germany, Norway, and Finland are popular for offering tuition-free or very low-cost education to international students, especially at public universities.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false">
+              Can I work while studying in Europe?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+              Yes, international students are allowed to work part-time (usually 20 hours/week) during semesters and full-time during holidays in most European countries.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">
+              Are scholarships available for international students?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+              Yes! Scholarships are offered by universities, governments, and programs like Erasmus+. They cover tuition, living costs, or both.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false">
+              What are the visa requirements for studying in Europe?
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+              You typically need to show proof of admission, financial support, health insurance, and valid travel documents. Requirements vary slightly by country.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">
+                Is Europe safe for international students?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+             Absolutely. Europe is considered one of the safest continents for students. Universities also have support services and international student offices to assist you.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">
+                How do I choose the right country and university in Europe?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+              Consider your course preference, language of instruction, budget, scholarship availability, and career opportunities. UKCoSA Global can help guide you step-by-step.
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+ <!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container text-md-start text-center">
+    <div class="row">
+
+      <!-- Newsletter Signup -->
+      <div class="col-12 mb-4 text-center">
+        <h5 class="fw-bold mb-3">Stay updated with UKCoSA Global</h5>
+        <div class="row justify-content-center">
+          <div class="col-md-3 mb-2">
+            <input type="email" class="form-control" placeholder="Email ID" />
+          </div>
+          <div class="col-md-3 mb-2">
+            <select class="form-select">
+              <option selected disabled>I'm Interested in</option>
+              <option>Studying Abroad</option>
+              <option>Test Prep</option>
+              <option>Application Assistance</option>
+              <option>Visa Guidance</option>
+              <option>Post-Arrival Services</option>
+              <option>Education-Loan Assistance</option>
+            </select>
+          </div>
+          <div class="col-md-2 mb-2">
+            <button class="btn btn-warning w-100">Register Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- About & Links -->
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold"><u>About UKCoSA Global</u></h6>
+        <p><small>
+          We are a rapidly expanding EdTech company with a global presence, streamlining international student recruitment by bridging students, education consultants, and universities worldwide through our advanced digital platform – coursefinder.ai.
+        </small>
+        </p>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Study Destinations</h6>
+        <ul class="list-unstyled small">
+          <li><a href="usa.html">United States</a></li>
+          <li><a href="canada.html">Canada</a></li>
+          <li><a href="uk.html">United Kingdom</a></li>
+          <li><a href="australia.html">Australia</a></li>
+          <li><a href="europe.html">Europe</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Services for Students</h6>
+        <ul class="list-unstyled small">
+          <li><a href="study-abroad.html">Counselling</a></li>
+          <li><a href="study-abroad.html#t1">Test Preparation</a></li>
+          <li><a href="study-abroad.html#aa">Application & Admission</a></li>
+          <li><a href="study-abroad.html#vg">Visa Processing</a></li>
+          <li><a href="study-abroad.html#ela">Education-Loan</a></li>
+          <li><a href="study-abroad.html#pa">Post-Arrival Services</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Company</h6>
+        <ul class="list-unstyled small">
+          <li>About Us</li>
+          <li>Careers <span class="badge bg-primary">We're Hiring!</span></li>
+          <li>News & Events</li>
+          <li>CSR Policy</li>
+          <li>POSH Policy</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Accreditation Logos -->
+    <div class="text-center mt-4 mb-3">
+      <h5 class="fw-bold"><u>Global Accreditations & Recognitions</u></h5>
+      <div class="d-flex justify-content-center gap-4 flex-wrap mt-5 mb-2">
+        <img src="images/axis-bank.png.webp" alt="Accreditation 1" height="40" />
+        <img src="images/hdfc.png" alt="PIER" height="40" />
+        <img src="images/duolingo.webp" alt="AAERI" height="40" />
+        <img src="images/upgrad.webp" alt="Education UK" height="40" />
+        <img src="images/flywire.png" alt="Other Accred" height="40" />
+        <img src="images/pte.png" alt="Other Accred" height="40" />
+      </div>
+    </div>
+
+    <!-- Social & Legal -->
+    <div class="container mt-4 border-top pt-3">
+      <div class="row align-items-center">
+        <!-- Centered copyright -->
+        <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <div class="small">Copyright © UKCoSA Global 2004–2025</div>
+        </div>
+
+        <!-- Right-aligned social icons -->
+        <div class="col-12 col-md-6 text-center text-md-end">
+          <a href="https://www.facebook.com/ukcosaglobal" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/ukcosaglobal/" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com/ukcosaglobal/" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+          <a href="https://x.com/ukcosaglobal" class="text-white"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const services = [
+    { name: "Study-abroad Counselling", link: "study-abroad.html" },
+    { name: "Test Preparation", link: "study-abroad.html#t1" },
+    { name: "Application Assistance", link: "study-abroad.html#aa" },
+    { name: "Visa Guidance", link: "study-abroad.html#vg" },
+    { name: "Post-Arrival Services", link: "study-abroad.html#pa" },
+    { name: "Education Loan Assistance", link: "study-abroad.html#ela" }
+  ];
+
+  const input = document.getElementById("serviceSearch");
+  const suggestionsBox = document.getElementById("suggestions");
+  let currentFocus = -1; // Index of focused suggestion
+
+  input.addEventListener("input", function () {
+    const val = this.value.trim().toLowerCase();
+    suggestionsBox.innerHTML = "";
+    currentFocus = -1;
+
+    if (val === "") return;
+
+    const filtered = services.filter(service => service.name.toLowerCase().startsWith(val));
+
+    filtered.forEach((service, index) => {
+      const li = document.createElement("li");
+      li.classList.add("list-group-item", "list-group-item-action");
+      li.textContent = service.name;
+      li.setAttribute("data-link", service.link);
+      li.style.cursor = "pointer";
+      li.onclick = () => window.location.href = service.link;
+      suggestionsBox.appendChild(li);
+    });
+  });
+
+  input.addEventListener("keydown", function (e) {
+    const items = suggestionsBox.getElementsByTagName("li");
+
+    if (e.key === "ArrowDown") {
+      currentFocus++;
+      addActive(items);
+    } else if (e.key === "ArrowUp") {
+      currentFocus--;
+      addActive(items);
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (currentFocus > -1 && items[currentFocus]) {
+        items[currentFocus].click();
+      } else {
+        // If typed text matches exactly
+        const match = services.find(service => service.name.toLowerCase() === input.value.trim().toLowerCase());
+        if (match) window.location.href = match.link;
+      }
+    }
+  });
+
+  function addActive(items) {
+    if (!items) return;
+    removeActive(items);
+    if (currentFocus >= items.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = items.length - 1;
+    items[currentFocus].classList.add("active");
+  }
+
+  function removeActive(items) {
+    for (let i = 0; i < items.length; i++) {
+      items[i].classList.remove("active");
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+    if (!input.contains(e.target)) {
+      suggestionsBox.innerHTML = "";
+      currentFocus = -1;
+    }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

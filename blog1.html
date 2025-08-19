@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>English Proficiency Guide</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    .hero-section {
+      background-color: #6c47ff; /* Purple background */
+      color: white;
+      text-align: center;
+      padding: 90px 20px 30px;
+      position: relative;
+    }
+
+    .hero-section h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .hero-section small {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .guide-banner {
+      margin-top: -15px;
+      border-radius: 12px;
+      padding: 20px;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .guide-banner img {
+      padding-top: 5px;
+      border-radius: 12px;
+      height: 400px;
+      width: 1000px;
+    }
+
+    .guide-banner .row {
+      align-items: center;
+    }
+    .blog-section {
+      background-color: #eae6fd; /* Same as your image's background */
+    }
+    .blog-card {
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    .blog-card:hover {
+      transform: scale(1.02);
+    }
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+    .narrow-container {
+    max-width: 750px; /* or 800px, adjust as needed */
+    margin: 0 auto;
+    }
+    body {
+      padding-top: 25px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    /* Footer section */
+    footer {
+      background-color: #1e1e1e;
+      color: #fff;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    footer h6 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    footer ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    footer ul li {
+      margin-bottom: 6px;
+      color: #ccc;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    footer .form-control,
+    footer .form-select {
+      border-radius: 0.25rem;
+      border: none;
+    }
+
+    footer .btn-warning {
+      font-weight: 600;
+      background-color: #f5a623;
+      border: none;
+    }
+
+    footer .btn-warning:hover {
+      background-color: #d48806;
+    }
+
+    /* Footer social icons */
+    footer .bi {
+      font-size: 1.25rem;
+      transition: color 0.3s ease;
+    }
+
+    footer .bi:hover {
+      color: #f5a623;
+    }
+
+    /* Responsive logo strip */
+    footer .d-flex img {
+      max-height: 40px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Navbar -->
+<nav class="navbar bg-dark navbar-expand-lg fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="#">
+      <img src="images/logo6.png" alt="UKCoSA Logo" height="55" width="70" class="me-2">
+      UKCoSA Global
+    </a>
+
+    <!-- Search (Large only) -->
+    <div class="d-none d-lg-block me-3 position-relative" style="width: 220px;">
+      <input class="form-control search-bar" id="serviceSearch" type="text" placeholder="Search services..." aria-label="Search" autocomplete="off">
+      <ul id="suggestions" class="list-group position-absolute w-100" style="z-index: 1000;"></ul>
+    </div>
+
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-1"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item mx-1"><a class="nav-link text-white" href="about.html">About Us</a></li>
+        <li class="nav-item dropdown mx-1">
+      <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+      <ul class="dropdown-menu bg-dark">
+        <li><a class="dropdown-item text-white" href="study-abroad.html">Study Abroad Counseling</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#t1">Test Preparation</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#aa">Application Assistance</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#vg">Visa Guidance</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#pa">Post-Arrival Services</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#ela">Education-Loan Assistance</a></li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown mx-1">
+      <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">Destinations</a>
+      <ul class="dropdown-menu bg-dark">
+        <li><a class="dropdown-item text-white" href="usa.html">USA</a></li>
+        <li><a class="dropdown-item text-white" href="uk.html">UK</a></li>
+        <li><a class="dropdown-item text-white" href="canada.html">Canada</a></li>
+        <li><a class="dropdown-item text-white" href="australia.html">Australia</a></li>
+        <li><a class="dropdown-item text-white" href="europe.html">Europe</a></li>
+      </ul>
+    </li>
+    <li class="nav-item mx-1"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+    <li class="nav-item mx-1"><a class="nav-link text-white" href="contact_us.html">Contact Us</a></li>
+    <li class="nav-item mx-1" style="padding-left: 10px;">
+      <a class="btn btn-primary text-white" href="#">Student Registration</a>
+    </li>
+  </ul>
+</div>
+
+</div>
+</nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <small>Blog • Detail Blog</small>
+      <h1>National Overseas Scholarship: A Gateway for Tribal Students to Study Abroad</h1>
+      <div class="text-white-50">May 29, 2025</div>
+    </div>
+  </section>
+
+  <!-- Guide Banner Section -->
+   <section style="background-image: url('images/blog_bg.avif'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <section class="guide-banner">
+    <div class="container justify-content-end">
+      <div class="">
+        <img src="images/nos.webp" alt="Top English Proficiency Tests" class="img-fluid justify-content-center">
+        <!-- Replace src with the actual path if needed -->
+      </div>
+    </div>
+    <hr style="
+  border: none;
+  height: 4px;
+  background-color: white;
+  box-shadow: 0 0 8px white;
+">
+
+
+  <div class="container my-5 text-white">
+    <div class="text-center mb-4">
+      <h1><strong><u>How the National Overseas Scholarship Empowers Tribal Students to Study Abroad</u></strong></h1>
+    </div>
+
+    <p class="">
+      <br>
+      Every great dream deserves a chance to become reality. For countless ambitious students from India’s Scheduled Tribes (ST) and Particularly Vulnerable Tribal Groups (PVTG), the National Overseas Scholarship (NOS) offers just that — a golden ticket to world-class education, global exposure, and personal transformation.
+    </p>
+    <p class="">
+      If you’re a tribal student aspiring to pursue higher studies overseas but feel held back by financial limitations, this scholarship could be the game-changer you've been waiting for.
+
+    <h2 class="mt-5">🎯 <strong>What is the National Overseas Scholarship (NOS)?</strong></h2>
+    <p>The <strong>NOS</strong> is a <strong>fully-funded initiative</strong> by the <strong>Ministry of Tribal Affairs</strong>, Government of India. Its goal is to support <strong>ST and PVTG students</strong> in pursuing <strong>Master’s, PhD, and Post-Doctoral degrees</strong> at renowned universities across the globe.</p>
+    <p>From engineering to economics, social sciences to public policy — NOS ensures that financial constraints do not become barriers to accessing premium global education.</p>
+
+    <h2 class="mt-5 "><strong><u>Eligibility Criteria: Who Can Apply?</u></strong></h2>
+    <ul>
+      <li>You belong to a <strong>Scheduled Tribe (ST)</strong> or <strong>PVTG</strong> group</li>
+      <li>You are <strong>below 35 years of age</strong></li>
+      <li>Your <strong>family income</strong> is <strong>less than ₹6,00,000</strong> per year</li>
+      <li>You meet the required academic qualifications:
+        <ul>
+          <li><strong>For Master’s</strong>: Bachelor’s degree with <strong>minimum 55%</strong></li>
+          <li><strong>For PhD</strong>: Master’s degree with <strong>minimum 55%</strong></li>
+        </ul>
+      </li>
+    </ul>
+    <br>
+
+    <p><strong>Bonus Tip:</strong> If you already have an <strong>offer letter from an international university</strong>, your application will receive higher priority.</p>
+
+    <h2 class="mt-5">💰 <strong>What Expenses Does the Scholarship Cover?</strong></h2>
+    <p>The NOS goes far beyond just paying tuition fees. It offers <strong>comprehensive financial support</strong>, including:</p>
+    <ul>
+      <li>✅ Full tuition fee reimbursement</li>
+      <li>✅ Living expenses (Approx. <strong>$15,400</strong> for the US or <strong>£9,900</strong> for the UK)</li>
+      <li>✅ Contingency and equipment allowance</li>
+      <li>✅ Visa and health insurance coverage</li>
+      <li>✅ Round-trip economy airfare</li>
+      <li>✅ Incidental travel charges</li>
+    </ul>
+    <p>This package is designed to let scholars <strong>focus on academics without financial stress</strong>.</p>
+
+    <h2 class="mt-5">📝 <strong>How to Apply for the NOS?</strong></h2>
+    <p>The application process is straightforward and can be completed <strong>online</strong> via the official portal.</p>
+    <p><a href="http://overseas.tribal.gov.in/StudentsRegistrationForm.aspx" target="_blank" class="btn btn-primary">Apply Here</a></p>
+    <p><strong>Documents Required:</strong></p>
+    <ul>
+      <li>A valid <strong>email ID</strong> and <strong>mobile number</strong></li>
+      <li><strong>ST/PVTG caste certificate</strong></li>
+      <li><strong>Family income certificate</strong></li>
+      <li>Academic <strong>transcripts and certificates</strong></li>
+      <li><strong>Passport-size photograph</strong></li>
+      <li><strong>Offer letter</strong> from the university (if available)</li>
+      <li>A <strong>DigiLocker account</strong> (for document verification)</li>
+    </ul>
+    <p><em>📌 Tip: Carefully read all the instructions on the portal before starting your application.</em></p>
+
+    <h2 class="mt-5">🕒 <strong>Application Timeline: When to Apply?</strong></h2>
+    <p>The scholarship window opens every year, and deadlines are announced on the <strong>official NOS website</strong>. Be proactive:</p>
+    <ul>
+      <li>✔ Check the portal regularly</li>
+      <li>✔ Prepare documents in advance</li>
+      <li>✔ <strong>Apply early</strong> — avoid last-minute rushes</li>
+    </ul>
+
+    <h2 class="mt-5">❤ <strong>Why This Scholarship Truly Matters</strong></h2>
+    <p>At <strong>UKCoSA Global</strong>, we recognize the power of education to uplift lives. Coming from a tribal background, many students need that one opportunity to excel. The NOS isn’t just a financial grant — it’s a bridge to success, confidence, and transformation.</p>
+    <p>If you or someone you know meets the eligibility, <strong>don’t hesitate</strong>. Let’s break the barriers together. <strong>The National Overseas Scholarship has already changed lives — yours could be next.</strong></p>
+
+    <h2 class="mt-5">🔗 <strong>Useful Link</strong></h2>
+    <p>➡ <a href="http://overseas.tribal.gov.in/StudentsRegistrationForm.aspx" target="_blank">Start your application now</a></p>
+
+    <h2 class="mt-5">🗣 <strong>Need Help?</strong></h2>
+    <p>If you're unsure about the process, reach out to <strong>UKCoSA Global</strong> for guidance and support. We are here to ensure that every tribal student gets the support they need to thrive.</p>
+    <blockquote class="blockquote">The world is waiting to hear your story, witness your talent, and be changed by your contribution.</blockquote>
+  </div>
+</section>
+</section>
+
+<!-- All Blogs Section -->
+  <section class="py-5 blog-section">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5">All Blogs</h2>
+      <div class="row g-4">
+        
+        <!-- Blog 1 -->
+        <div class="col-md-4">
+          <div class="card blog-card h-100" onclick="window.location.href='blog1.html'">
+            <img src="images/nos.webp" class="card-img-top" alt="New York Universities">
+            <div class="card-body">
+              <h6 class="text-primary fw-bold">STUDY ABROAD</h6>
+              <h5 class="card-title">National Overseas Scholarship: A Gateway for Tribal Students ...</h5>
+              <p class="card-text text-muted"> 
+Every great dream deserves a chance to become reality. For countless ambitious students from India’s Scheduled Tribes (ST) and ...</p>
+              <p class="text-secondary">May 29, 2025</p>
+              <a href="blog1.html" class="btn btn-outline-primary mt-2">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog 2 -->
+        <div class="col-md-4">
+          <div class="card blog-card h-100" onclick="window.location.href='blog2.html'">
+            <img src="images/english.webp" class="card-img-top" alt="Part-Time in Ireland">
+            <div class="card-body">
+              <h6 class="text-primary fw-bold">STUDY ABROAD</h6>
+              <h5 class="card-title">Top English Proficiency Tests for Studying Abroad: A Detailed...</h5>
+              <p class="card-text text-muted">English proficiency tests have become an integral part of the educational and professional journey for countless individuals...</p>
+              <p class="text-secondary">May 29, 2025</p>
+              <a href="blog2.html" class="btn btn-outline-primary mt-2">Read More</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Blog 3 -->
+        <div class="col-md-4">
+          <div class="card blog-card h-100" onclick="window.location.href='blog3.html'">
+            <img src="images/blog_3.jpg" class="card-img-top" alt="US Universities without GRE">
+            <div class="card-body">
+              <h6 class="text-primary fw-bold">STUDY ABROAD</h6>
+              <h5 class="card-title">Top 10 Things You Learn While Studying Abroad - Beyond...</h5>
+              <p class="card-text text-muted">Beyond the textbooks and lecture halls lies a world of discovery waiting for those brave enough to study abroad. Remember the...</p>
+              <p class="text-secondary">May 27, 2025</p>
+              <a href="blog3.html" class="btn btn-outline-primary mt-2">Read More</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+ <section class="py-5 bg-light">
+  <div class="container narrow-container text-center">
+    <h2 class="mb-5"><u>UKCoSA Global in the News</u></h2>
+    <div class="row gx-0 gy-2 justify-content-center">
+      <!-- Row 1 -->
+      <div class="col-3">
+        <img src="images/pie.svg" class="img-fluid w-100" style="max-height: 60px;" alt="The PIE News">
+      </div>
+      <div class="col-3">
+        <img src="images/vc.svg" class="img-fluid w-100" style="max-height: 60px;" alt="VCCircle">
+      </div>
+      <div class="col-3">
+        <img src="images/business.svg" class="img-fluid w-100" style="max-height: 60px;" alt="Business Standard">
+      </div>
+      <div class="col-3">
+        <img src="images/money.svg" class="img-fluid w-100" style="max-height: 60px;" alt="Moneycontrol">
+      </div>
+
+      <!-- Row 2 -->
+      <div class="col-3">
+        <img src="images/story.svg" class="img-fluid w-100" style="max-height: 60px;" alt="YourStory">
+      </div>
+      <div class="col-3">
+        <img src="images/pie.svg" class="img-fluid w-100" style="max-height: 60px;" alt="The PIE News">
+      </div>
+      <div class="col-3">
+        <img src="images/mint.svg" class="img-fluid w-100" style="max-height: 60px;" alt="Mint">
+      </div>
+      <div class="col-3">
+        <img src="images/pie.svg" class="img-fluid w-100" style="max-height: 60px;" alt="The PIE News">
+      </div>
+    </div>
+  </div>
+</section>
+
+ <!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container text-md-start text-center">
+    <div class="row">
+
+      <!-- Newsletter Signup -->
+      <div class="col-12 mb-4 text-center">
+        <h5 class="fw-bold mb-3">Stay updated with UKCoSA Global</h5>
+        <div class="row justify-content-center">
+          <div class="col-md-3 mb-2">
+            <input type="email" class="form-control" placeholder="Email ID" />
+          </div>
+          <div class="col-md-3 mb-2">
+            <select class="form-select">
+              <option selected disabled>I'm Interested in</option>
+              <option>Studying Abroad</option>
+              <option>Test Prep</option>
+              <option>Application Assistance</option>
+              <option>Visa Guidance</option>
+              <option>Post-Arrival Services</option>
+              <option>Education-Loan Assistance</option>
+            </select>
+          </div>
+          <div class="col-md-2 mb-2">
+            <button class="btn btn-warning w-100">Register Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- About & Links -->
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold"><u>About UKCoSA Global</u></h6>
+        <p><small>
+          We are a rapidly expanding EdTech company with a global presence, streamlining international student recruitment by bridging students, education consultants, and universities worldwide through our advanced digital platform – coursefinder.ai.
+        </small>
+        </p>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Study Destinations</h6>
+        <ul class="list-unstyled small">
+          <li><a href="usa.html">United States</a></li>
+          <li><a href="canada.html">Canada</a></li>
+          <li><a href="uk.html">United Kingdom</a></li>
+          <li><a href="australia.html">Australia</a></li>
+          <li><a href="europe.html">Europe</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Services for Students</h6>
+        <ul class="list-unstyled small">
+          <li><a href="study-abroad.html">Counselling</a></li>
+          <li><a href="study-abroad.html#t1">Test Preparation</a></li>
+          <li><a href="study-abroad.html#aa">Application & Admission</a></li>
+          <li><a href="study-abroad.html#vg">Visa Processing</a></li>
+          <li><a href="study-abroad.html#ela">Education-Loan</a></li>
+          <li><a href="study-abroad.html#pa">Post-Arrival Services</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Company</h6>
+        <ul class="list-unstyled small">
+          <li>About Us</li>
+          <li>Careers <span class="badge bg-primary">We're Hiring!</span></li>
+          <li>News & Events</li>
+          <li>CSR Policy</li>
+          <li>POSH Policy</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Accreditation Logos -->
+    <div class="text-center mt-4 mb-3">
+      <h5 class="fw-bold"><u>Global Accreditations & Recognitions</u></h5>
+      <div class="d-flex justify-content-center gap-4 flex-wrap mt-5 mb-2">
+        <img src="images/axis-bank.png.webp" alt="Accreditation 1" height="40" />
+        <img src="images/hdfc.png" alt="PIER" height="40" />
+        <img src="images/duolingo.webp" alt="AAERI" height="40" />
+        <img src="images/upgrad.webp" alt="Education UK" height="40" />
+        <img src="images/flywire.png" alt="Other Accred" height="40" />
+        <img src="images/pte.png" alt="Other Accred" height="40" />
+      </div>
+    </div>
+
+    <!-- Social & Legal -->
+    <div class="container mt-4 border-top pt-3">
+      <div class="row align-items-center">
+        <!-- Centered copyright -->
+        <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <div class="small">Copyright © UKCoSA Global 2004–2025</div>
+        </div>
+
+        <!-- Right-aligned social icons -->
+        <div class="col-12 col-md-6 text-center text-md-end">
+          <a href="https://www.facebook.com/ukcosaglobal" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/ukcosaglobal/" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com/ukcosaglobal/" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+          <a href="https://x.com/ukcosaglobal" class="text-white"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const services = [
+    { name: "Study-abroad Counselling", link: "study-abroad.html" },
+    { name: "Test Preparation", link: "study-abroad.html#t1" },
+    { name: "Application Assistance", link: "study-abroad.html#aa" },
+    { name: "Visa Guidance", link: "study-abroad.html#vg" },
+    { name: "Post-Arrival Services", link: "study-abroad.html#pa" },
+    { name: "Education Loan Assistance", link: "study-abroad.html#ela" }
+  ];
+
+  const input = document.getElementById("serviceSearch");
+  const suggestionsBox = document.getElementById("suggestions");
+  let currentFocus = -1; // Index of focused suggestion
+
+  input.addEventListener("input", function () {
+    const val = this.value.trim().toLowerCase();
+    suggestionsBox.innerHTML = "";
+    currentFocus = -1;
+
+    if (val === "") return;
+
+    const filtered = services.filter(service => service.name.toLowerCase().startsWith(val));
+
+    filtered.forEach((service, index) => {
+      const li = document.createElement("li");
+      li.classList.add("list-group-item", "list-group-item-action");
+      li.textContent = service.name;
+      li.setAttribute("data-link", service.link);
+      li.style.cursor = "pointer";
+      li.onclick = () => window.location.href = service.link;
+      suggestionsBox.appendChild(li);
+    });
+  });
+
+  input.addEventListener("keydown", function (e) {
+    const items = suggestionsBox.getElementsByTagName("li");
+
+    if (e.key === "ArrowDown") {
+      currentFocus++;
+      addActive(items);
+    } else if (e.key === "ArrowUp") {
+      currentFocus--;
+      addActive(items);
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (currentFocus > -1 && items[currentFocus]) {
+        items[currentFocus].click();
+      } else {
+        // If typed text matches exactly
+        const match = services.find(service => service.name.toLowerCase() === input.value.trim().toLowerCase());
+        if (match) window.location.href = match.link;
+      }
+    }
+  });
+
+  function addActive(items) {
+    if (!items) return;
+    removeActive(items);
+    if (currentFocus >= items.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = items.length - 1;
+    items[currentFocus].classList.add("active");
+  }
+
+  function removeActive(items) {
+    for (let i = 0; i < items.length; i++) {
+      items[i].classList.remove("active");
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+    if (!input.contains(e.target)) {
+      suggestionsBox.innerHTML = "";
+      currentFocus = -1;
+    }
+  });
+</script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

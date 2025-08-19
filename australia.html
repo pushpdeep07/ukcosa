@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Study in Australia | UKCoSA Global</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    body{
+      padding-top: 35px;
+    }
+    .hero-section {
+      background-image: url('images/aus.jpg'); /* Add high-quality Australian building image */
+      background-size: cover;
+      background-position: right center;
+      color: rgb(14, 11, 11);
+      padding: 40px 100px;
+      min-height: 80vh;
+      display: flex;
+      align-items: top;
+    }
+
+    .hero-overlay {
+      padding: 40px 90px;
+      border-radius: 10px;
+    }
+
+    .highlight-section {
+      background-color: #91d4df; /* Light green */
+      padding: 60px 20px;
+    }
+
+    .study-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Footer section */
+    footer {
+      background-color: #1e1e1e;
+      color: #fff;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    footer h6 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    footer ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    footer ul li {
+      margin-bottom: 6px;
+      color: #ccc;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    footer .form-control,
+    footer .form-select {
+      border-radius: 0.25rem;
+      border: none;
+    }
+
+    footer .btn-warning {
+      font-weight: 600;
+      background-color: #f5a623;
+      border: none;
+    }
+
+    footer .btn-warning:hover {
+      background-color: #d48806;
+    }
+
+    /* Footer social icons */
+    footer .bi {
+      font-size: 1.25rem;
+      transition: color 0.3s ease;
+    }
+
+    footer .bi:hover {
+      color: #f5a623;
+    }
+
+    /* Responsive logo strip */
+    footer .d-flex img {
+      max-height: 40px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar bg-dark navbar-expand-lg fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="#">
+      <img src="images/logo6.png" alt="UKCoSA Logo" height="55" width="70" class="me-2">
+      UKCoSA Global
+    </a>
+
+    <!-- Search (Large only) -->
+    <div class="d-none d-lg-block me-3 position-relative" style="width: 220px;">
+      <input class="form-control search-bar" id="serviceSearch" type="text" placeholder="Search services..." aria-label="Search" autocomplete="off">
+      <ul id="suggestions" class="list-group position-absolute w-100" style="z-index: 1000;"></ul>
+    </div>
+
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-1"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item mx-1"><a class="nav-link text-white" href="about.html">About Us</a></li>
+        <li class="nav-item dropdown mx-1">
+      <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+      <ul class="dropdown-menu bg-dark">
+        <li><a class="dropdown-item text-white" href="study-abroad.html">Study Abroad Counseling</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#t1">Test Preparation</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#aa">Application Assistance</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#vg">Visa Guidance</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#pa">Post-Arrival Services</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#ela">Education-Loan Assistance</a></li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown mx-1">
+      <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">Destinations</a>
+      <ul class="dropdown-menu bg-dark">
+        <li><a class="dropdown-item text-white" href="usa.html">USA</a></li>
+        <li><a class="dropdown-item text-white" href="uk.html">UK</a></li>
+        <li><a class="dropdown-item text-white" href="canada.html">Canada</a></li>
+        <li><a class="dropdown-item text-white" href="australia.html">Australia</a></li>
+        <li><a class="dropdown-item text-white" href="europe.html">Europe</a></li>
+      </ul>
+    </li>
+    <li class="nav-item mx-1"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+    <li class="nav-item mx-1"><a class="nav-link text-white" href="contact_us.html">Contact Us</a></li>
+    <li class="nav-item mx-1" style="padding-left: 10px;">
+      <a class="btn btn-primary text-white" href="#">Student Registration</a>
+    </li>
+  </ul>
+</div>
+
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="hero-overlay">
+          <h1 class="display-5 fw-bold ">Study in Australia</h1>
+          <p class="mt-4 fw-semibold">Australia is renowned for its world-class education system, vibrant cities, and stunning natural beauty. With globally ranked universities, strong industry links, and a diverse, welcoming community, it has become a leading destination for international students. Australian institutions offer innovative teaching, excellent research opportunities, and a high quality of life that enriches both academic and personal development.<br> At UKCoSA Global, we make your dream of studying in Australia a reality. From course selection and application assistance to visa guidance and pre-departure briefings, we’re with you every step of the way — ensuring a smooth, informed, and empowering journey toward your future.</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Study in Australia Section -->
+<section class="highlight-section">
+  <div class="container">
+    <h2 class="text-center mb-5">Why Study in Australia?</h2>
+
+    <!-- Point 1 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <h4>1. Wide Range of Courses and Institutions</h4>
+        <p>Australian institutions offer an extensive variety of programs across all levels and disciplines — from vocational courses and diplomas to undergraduate and postgraduate degrees. Students can pursue traditional academic fields like engineering and law or emerging areas like cybersecurity, AI, and environmental science, choosing programs that align with their passion and career goals.</p>
+        <p>Many universities provide flexible course structures with options for dual majors, research tracks, or industry placements. The country also has Technical and Further Education (TAFE) institutes that offer practical, job-oriented training. This breadth ensures that every student finds a path tailored to their interests and aspirations.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="images/wide.jpg" alt="Top USA Universities" class="study-img" style="height: 250px; width: 450px; border: 3px solid black;" />
+      </div>
+
+    </div>
+    <br>
+    <br>
+
+    <!-- Point 2 -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-6">
+        <h4>2. Excellent Quality of Life</h4>
+        <p>Australia offers an exceptional standard of living, with modern infrastructure, efficient public transport, and clean, safe cities. Cities like Melbourne, Sydney, Brisbane, and Perth are frequently ranked among the most livable in the world due to their healthcare, education, safety, and overall quality of life. International students enjoy access to quality housing, public amenities, and support services that make daily life comfortable.</p>
+        <p>Beyond urban living, Australia boasts breathtaking natural beauty — from stunning beaches and national parks to vibrant wildlife. The laid-back lifestyle and favorable climate allow students to balance academics with recreation, contributing to a well-rounded and healthy student experience.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="images/quality_aus.webp" alt="Flexible Courses in USA" class="study-img" style="height: 250px; width: 450px; border: 3px solid black;"/>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- Point 3 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <h4>3. Globally Recognized Education System</h4>
+        <p>Australia is home to several world-leading universities known for academic excellence and high global rankings. Institutions such as the University of Melbourne, Australian National University, and the University of Sydney consistently feature in international league tables, offering rigorous programs that meet global standards. Australian degrees are recognized and respected across the world, giving graduates a competitive edge in the job market.</p>
+        <p>The education system emphasizes innovation, research, and critical thinking. Students gain access to advanced labs, industry-standard tools, and collaborative projects that encourage hands-on learning and real-world skills. Whether pursuing science, business, arts, or technology, students benefit from a curriculum designed to adapt to global trends and employer needs.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="images/edu_aus.jpeg" alt="Flexible Courses in USA" class="study-img" style="height: 250px; width: 450px; border: 3px solid black;"/>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- Point 4 -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-6">
+        <h4>4. Post-Study Work Opportunities</h4>
+        <p>One of Australia’s most appealing features is its generous post-study work rights. International graduates can apply for the Temporary Graduate Visa (subclass 485), which allows them to stay and work in Australia for 2–4 years, depending on their qualification level and location. This offers a valuable opportunity to gain international work experience and establish a career foundation.</p>
+        <p>Additionally, Australia's strong economy and industry-linked programs improve employability. Many courses are designed with input from employers, and internships or work-integrated learning are common, helping students build relevant skills and professional networks before graduation.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="images/post_aus.jpg" alt="Top USA Universities" class="study-img" style="height: 250px; width: 450px; border: 3px solid black;" />
+      </div>
+
+    </div>
+    <br>
+    <br>
+
+    <!-- Point 5 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <h4>5.  Multicultural and Inclusive Society</h4>
+        <p>Australia is known for being one of the most multicultural countries in the world. With people from over 200 countries living harmoniously, students experience a rich blend of cultures, languages, and traditions. This diversity fosters inclusiveness and creates a welcoming environment for all international students, regardless of their background.</p>
+        <p>Universities support this diversity through cultural events, student clubs, and language support services. International students are encouraged to express their identity, build friendships across cultures, and engage in communities that broaden their worldview and build global citizenship.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="images/cult_aus.png" alt="Top USA Universities" class="study-img" style="height: 250px; width: 450px; border: 3px solid black;" />
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section style="background-color: rgb(231, 192, 199); padding: 50px 0;">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold">Popular Universities in Australia</h2>
+    <div class="row g-4">
+      <!-- Row 1 -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/unsw.png" alt="UConn" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">The University of New South Wales, Sydney (CRICOS Code 00098G)</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/queensland_aus.svg" alt="Johns Hopkins" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">The University of Queensland, Brisbane (CRICOS Code 00025B)</p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/uni_adelaide.svg" alt="ASU" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">The University of Adelaide, Adelaide (CRICOS Code 00123M) (Except students from Punjab, Chandigarh, Haryana, Delhi NCR, Rajasthan, Gujarat, Uttar Pradesh, Himachal Pradesh and J&K)</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/wollongong.png" alt="UMass" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">University of Wollongong, Wollongong (CRICOS Code 00102E) (Only PG) (Except students from Punjab and Haryana (exc. Gurgaon), Rajasthan, UP (exc. Noida), J&K)</p>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/macquarie.svg" alt="UCR" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">Macquarie University, Sydney (CRICOS Code 00002J) (Except students from Rajasthan, Punjab, Haryana, Uttar Pradesh and Uttarakhand)</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/sydney.jpg" alt="Virginia Tech" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">University of Technology Sydney, Sydney (CRICOS Provider No. 00099F, TEQSA: PRV12060)</p>
+        </div>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/perth.jpg" alt="USF" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">University of Western Australia, Perth (CRICOS Code: 00126G)</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/adelaide.png" alt="UArizona" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">Adelaide University, Adelaide (CRICOS Code 04249J)</p>
+        </div>
+      </div>
+
+      <!-- Row 5 -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/rmit.svg" alt="Drexel" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">RMIT University, Melbourne (CRICOS Code 00122A) (Except students from Punjab, Haryana and J&K)</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/monash_aus.svg" alt="Delaware" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">Monash University, Melbourne (CRICOS Code 00008C) (Except students from Punjab and Haryana)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5" style="background-color: #f8f9fa; overflow-x: hidden;">
+  <div class="container position-relative" style="max-width: 1140px;">
+    <h2 class="text-center fw-bold mb-5">👩‍🎓 What our Sudents say about us 👨‍🎓</h2>
+    <div id="successStoriesCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Gujarat to the University of Bristol 🇬🇧</strong></p>
+                  <p>"UKCoSA Global gave me an opportunity that once felt impossible — a chance to study abroad and truly pursue my dreams."</p>
+                  <p>I’m Manish Vaghela, coming from a humble background in Gujarat, India. As the first in my family to study internationally, this journey has been nothing short of transformative.</p>
+                  <p>Thanks to the unwavering support and personalised guidance from UKCoSA Global, I am now pursuing an MSc in Engineering with Management at the prestigious University of Bristol — and that too with a Fully Funded Government of India Scholarship.</p>
+                  <p>Words fall short when I say — Ravi Saxena sir is like God for me. He went above and beyond to support me when I needed it the most. 🙏</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Buxar, Bihar to a Fully Funded Scholarship in the UK 🇬🇧</strong></p>
+                  <p>I’m Abid Hassan from Buxar, Bihar, and I’m incredibly thankful to UKCoSA Global for guiding me through every step of my journey to studying abroad.</p>
+                  <p>From handling the complex admission process to supporting me in securing a Fully Funded Government Scholarship, their expert guidance made everything smooth and stress-free.</p>
+                  <p>I’m now pursuing MSc Management (CSR and Sustainability) at a top UK university — something I once thought was beyond my reach.<br>UKCoSA Global made it possible through their dedication, patience, and step-by-step support.</p>
+                  <p>Thank you to the entire team, especially for making this life-changing opportunity a reality.🙏</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Delhi to the University of Bristol 🇬🇧</strong></p>
+                  <p>I’m Karan from Delhi, and I’m thrilled to share that I’ve achieved my dream of studying at the prestigious University of Bristol 🇬🇧 — all thanks to UKCoSA Global and my mentor’s incredible support.</p>
+                  <p>From guiding me through the admission process to helping me secure a Fully Funded Scholarship, their step-by-step assistance made my entire journey smooth, stress-free, and empowering.</p>
+                  <p>Today, I’m proudly pursuing an MSc in Engineering and Management, and this life-changing opportunity wouldn’t have been possible without the unwavering support of UKCoSA Global.</p>
+                  <p>Thank you for believing in me and helping turn my dream into reality.🙏🎓</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Buxar, Bihar to a Fully Funded Scholarship in the UK 🇬🇧</strong></p>
+                  <p>I’m Abid Hassan from Buxar, Bihar, and I’m incredibly thankful to UKCoSA Global for guiding me through every step of my journey to studying abroad.</p>
+                  <p>From handling the complex admission process to supporting me in securing a Fully Funded Government Scholarship, their expert guidance made everything smooth and stress-free.</p>
+                  <p>I’m now pursuing MSc Management (CSR and Sustainability) at a top UK university — something I once thought was beyond my reach.<br>UKCoSA Global made it possible through their dedication, patience, and step-by-step support.</p>
+                  <p>Thank you to the entire team, especially for making this life-changing opportunity a reality. 🙏</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Delhi to the University of Bristol 🇬🇧</strong></p>
+                  <p>I’m Karan from Delhi, and I’m thrilled to share that I’ve achieved my dream of studying at the prestigious University of Bristol 🇬🇧 — all thanks to UKCoSA Global and my mentor’s incredible support.</p>
+                  <p>From guiding me through the admission process to helping me secure a Fully Funded Scholarship, their step-by-step assistance made my entire journey smooth, stress-free, and empowering.</p>
+                  <p>Today, I’m proudly pursuing an MSc in Engineering and Management, and this life-changing opportunity wouldn’t have been possible without the unwavering support of UKCoSA Global.</p>
+                  <p>Thank you for believing in me and helping turn my dream into reality.🙏🎓</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Nagpur to Imperial College London 🇬🇧</strong></p>
+                  <p>I’m Prachi from Nagpur, and I feel honoured to share that I’ve turned my dream of studying at the globally renowned Imperial College London 🇬🇧 into a reality — all thanks to UKCoSA Global and the sincere mentorship I received.</p>
+                  <p>Their step-by-step guidance throughout the admission process and scholarship application helped me secure the prestigious Rajarshi Shahu Maharaj Scholarship by the Government of Maharashtra, fully funding my education.</p>
+                  <p>Today, I’m pursuing my dream with confidence, and this journey would’ve been impossible without their unwavering support.</p>
+                  <p>Thank you, Ravi Sir, for mentoring me like family and helping me reach where I am today. 🙏🎓</p>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls (arrows moved out by -150px) -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#successStoriesCarousel" data-bs-slide="prev"
+        style="position: absolute; top: 50%; left: -170px; transform: translateY(-50%); z-index: 10;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"
+          style="background-color: #000; padding: 15px; border-radius: 50%;"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#successStoriesCarousel" data-bs-slide="next"
+        style="position: absolute; top: 50%; right: -170px; transform: translateY(-50%); z-index: 10;">
+        <span class="carousel-control-next-icon" aria-hidden="true"
+          style="background-color: #000; padding: 15px; border-radius: 50%;"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="py-5" style="background-color: #aebbd4;">
+  <div class="container d-flex justify-content-center">
+    <div class="w-100" style="max-width: 800px;">
+      <h2 class="text-center fw-bold mb-4">FAQs About Studying in Australia</h2>
+
+      <div class="accordion" id="kcFaqAccordion">
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false">
+              How can UKCoSA Global help with my application to Australian universities?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+             We assist you in selecting the right course and university, preparing your application documents, and submitting applications on time with expert guidance throughout.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false">
+               What English language tests are accepted by Australian universities?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+              Most universities accept IELTS, TOEFL, and PTE Academic as proof of English proficiency.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false">
+              Are there scholarships available for international students in Australia?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+              Yes, Australian universities and the government offer merit-based and need-based scholarships for international students.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">
+               Can I work while studying in Australia?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+              Yes, international students can work up to 48 hours per fortnight during academic sessions and full-time during breaks.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false">
+               What is the cost of studying in Australia?
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+              Tuition fees vary by university and course, ranging between AUD 20,000 to AUD 45,000 per year. Living expenses are typically around AUD 21,000 per year.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">
+               What are the popular courses among international students in Australia?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+             Business, IT, Engineering, Health Sciences, and Environmental Sciences are among the top choices for international students.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">
+                 Does UKCoSA Global offer visa support for Australia?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+              Yes, we help you with the complete visa application process — including document preparation, financial guidance, and interview support.
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+ <!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container text-md-start text-center">
+    <div class="row">
+
+      <!-- Newsletter Signup -->
+      <div class="col-12 mb-4 text-center">
+        <h5 class="fw-bold mb-3">Stay updated with UKCoSA Global</h5>
+        <div class="row justify-content-center">
+          <div class="col-md-3 mb-2">
+            <input type="email" class="form-control" placeholder="Email ID" />
+          </div>
+          <div class="col-md-3 mb-2">
+            <select class="form-select">
+              <option selected disabled>I'm Interested in</option>
+              <option>Studying Abroad</option>
+              <option>Test Prep</option>
+              <option>Application Assistance</option>
+              <option>Visa Guidance</option>
+              <option>Post-Arrival Services</option>
+              <option>Education-Loan Assistance</option>
+            </select>
+          </div>
+          <div class="col-md-2 mb-2">
+            <button class="btn btn-warning w-100">Register Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- About & Links -->
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold"><u>About UKCoSA Global</u></h6>
+        <p><small>
+          We are a rapidly expanding EdTech company with a global presence, streamlining international student recruitment by bridging students, education consultants, and universities worldwide through our advanced digital platform – coursefinder.ai.
+        </small>
+        </p>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Study Destinations</h6>
+        <ul class="list-unstyled small">
+          <li><a href="usa.html">United States</a></li>
+          <li><a href="canada.html">Canada</a></li>
+          <li><a href="uk.html">United Kingdom</a></li>
+          <li><a href="australia.html">Australia</a></li>
+          <li><a href="europe.html">Europe</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Services for Students</h6>
+        <ul class="list-unstyled small">
+          <li><a href="study-abroad.html">Counselling</a></li>
+          <li><a href="study-abroad.html#t1">Test Preparation</a></li>
+          <li><a href="study-abroad.html#aa">Application & Admission</a></li>
+          <li><a href="study-abroad.html#vg">Visa Processing</a></li>
+          <li><a href="study-abroad.html#ela">Education-Loan</a></li>
+          <li><a href="study-abroad.html#pa">Post-Arrival Services</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Company</h6>
+        <ul class="list-unstyled small">
+          <li>About Us</li>
+          <li>Careers <span class="badge bg-primary">We're Hiring!</span></li>
+          <li>News & Events</li>
+          <li>CSR Policy</li>
+          <li>POSH Policy</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Accreditation Logos -->
+    <div class="text-center mt-4 mb-3">
+      <h5 class="fw-bold"><u>Global Accreditations & Recognitions</u></h5>
+      <div class="d-flex justify-content-center gap-4 flex-wrap mt-5 mb-2">
+        <img src="images/axis-bank.png.webp" alt="Accreditation 1" height="40" />
+        <img src="images/hdfc.png" alt="PIER" height="40" />
+        <img src="images/duolingo.webp" alt="AAERI" height="40" />
+        <img src="images/upgrad.webp" alt="Education UK" height="40" />
+        <img src="images/flywire.png" alt="Other Accred" height="40" />
+        <img src="images/pte.png" alt="Other Accred" height="40" />
+      </div>
+    </div>
+
+    <!-- Social & Legal -->
+    <div class="container mt-4 border-top pt-3">
+      <div class="row align-items-center">
+        <!-- Centered copyright -->
+        <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <div class="small">Copyright © UKCoSA Global 2004–2025</div>
+        </div>
+
+        <!-- Right-aligned social icons -->
+        <div class="col-12 col-md-6 text-center text-md-end">
+          <a href="https://www.facebook.com/ukcosaglobal" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/ukcosaglobal/" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com/ukcosaglobal/" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+          <a href="https://x.com/ukcosaglobal" class="text-white"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const services = [
+    { name: "Study-abroad Counselling", link: "study-abroad.html" },
+    { name: "Test Preparation", link: "study-abroad.html#t1" },
+    { name: "Application Assistance", link: "study-abroad.html#aa" },
+    { name: "Visa Guidance", link: "study-abroad.html#vg" },
+    { name: "Post-Arrival Services", link: "study-abroad.html#pa" },
+    { name: "Education Loan Assistance", link: "study-abroad.html#ela" }
+  ];
+
+  const input = document.getElementById("serviceSearch");
+  const suggestionsBox = document.getElementById("suggestions");
+  let currentFocus = -1; // Index of focused suggestion
+
+  input.addEventListener("input", function () {
+    const val = this.value.trim().toLowerCase();
+    suggestionsBox.innerHTML = "";
+    currentFocus = -1;
+
+    if (val === "") return;
+
+    const filtered = services.filter(service => service.name.toLowerCase().startsWith(val));
+
+    filtered.forEach((service, index) => {
+      const li = document.createElement("li");
+      li.classList.add("list-group-item", "list-group-item-action");
+      li.textContent = service.name;
+      li.setAttribute("data-link", service.link);
+      li.style.cursor = "pointer";
+      li.onclick = () => window.location.href = service.link;
+      suggestionsBox.appendChild(li);
+    });
+  });
+
+  input.addEventListener("keydown", function (e) {
+    const items = suggestionsBox.getElementsByTagName("li");
+
+    if (e.key === "ArrowDown") {
+      currentFocus++;
+      addActive(items);
+    } else if (e.key === "ArrowUp") {
+      currentFocus--;
+      addActive(items);
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (currentFocus > -1 && items[currentFocus]) {
+        items[currentFocus].click();
+      } else {
+        // If typed text matches exactly
+        const match = services.find(service => service.name.toLowerCase() === input.value.trim().toLowerCase());
+        if (match) window.location.href = match.link;
+      }
+    }
+  });
+
+  function addActive(items) {
+    if (!items) return;
+    removeActive(items);
+    if (currentFocus >= items.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = items.length - 1;
+    items[currentFocus].classList.add("active");
+  }
+
+  function removeActive(items) {
+    for (let i = 0; i < items.length; i++) {
+      items[i].classList.remove("active");
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+    if (!input.contains(e.target)) {
+      suggestionsBox.innerHTML = "";
+      currentFocus = -1;
+    }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

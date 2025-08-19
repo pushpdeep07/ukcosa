@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UKCoSA Global</title>
+    <link rel="icon" type="image/png" href="images/logo6.png">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+
+
+  <!-- Custom Styles (externalized) -->
+  <link href="assets/styles.css" rel="stylesheet"/>
+  <!-- Bootstrap JS Bundle with Popper -->
+
+
+  <!-- Defer Bootstrap Bundle -->
+
+
+  <style>
+  #suggestions {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+</style>
+
+
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar bg-dark navbar-expand-lg fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="#">
+      <img src="images/logo6.png" alt="UKCoSA Logo" height="55" width="70" class="me-2">
+      UKCoSA Global
+    </a>
+
+    <!-- Search (Large only) -->
+    <div class="d-none d-lg-block me-3 position-relative" style="width: 220px;">
+      <input class="form-control search-bar" id="serviceSearch" type="text" placeholder="Search services..." aria-label="Search" autocomplete="off">
+      <ul id="suggestions" class="list-group position-absolute w-100" style="z-index: 1000;"></ul>
+    </div>
+
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-1"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item mx-1"><a class="nav-link text-white" href="about.html">About Us</a></li>
+        <li class="nav-item dropdown mx-1">
+      <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+      <ul class="dropdown-menu bg-dark">
+        <li><a class="dropdown-item text-white" href="study-abroad.html">Study Abroad Counseling</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#t1">Test Preparation</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#aa">Application Assistance</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#vg">Visa Guidance</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#pa">Post-Arrival Services</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#ela">Education-Loan Assistance</a></li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown mx-1">
+      <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">Destinations</a>
+      <ul class="dropdown-menu bg-dark">
+        <li><a class="dropdown-item text-white" href="usa.html">USA</a></li>
+        <li><a class="dropdown-item text-white" href="uk.html">UK</a></li>
+        <li><a class="dropdown-item text-white" href="canada.html">Canada</a></li>
+        <li><a class="dropdown-item text-white" href="australia.html">Australia</a></li>
+        <li><a class="dropdown-item text-white" href="europe.html">Europe</a></li>
+      </ul>
+    </li>
+    <li class="nav-item mx-1"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+    <li class="nav-item mx-1"><a class="nav-link text-white" href="contact_us.html">Contact Us</a></li>
+    <li class="nav-item mx-1" style="padding-left: 10px;">
+      <a class="btn btn-primary text-white" href="student_register.html">Student Registration</a>
+    </li>
+  </ul>
+</div>
+
+</div>
+</nav>
+
+
+
+  <!-- Hero Section -->
+  <section class="hero text-white d-flex align-items-center justify-content-center" style="min-height: 60vh; background: #0052D4;">
+  <div class="container">
+    <div class="row align-items-center justify-content-center text-center text-md-start">
+      
+      <!-- Text Content -->
+      <div class="col-12 col-md-6 mb-4 mb-md-0">
+        <h1 class="display-5 fw-bold">Start Your Global Education Journey</h1>
+        <p class="lead">Expert guidance for studying abroad — from application to arrival.</p>
+        <a href="#" class="btn btn-light btn-lg mt-3">Get Started</a>
+      </div>
+
+      <!-- Image -->
+      <div class="col-12 col-md-6 d-flex justify-content-center">
+        <picture>
+          <source srcset="images/img2.webp" type="image/webp">
+          <img src="images/img2.jpeg" alt="Students preparing to study abroad" class="img-fluid rounded-pill" loading="lazy" style="max-width: 100%; height: auto; width: 480px;">
+        </picture>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="py-5 text-center">
+  <div class="container">
+    <h2 class="fw-bold mb-2">UKCoSA Global’s eminent university tie-ups</h2>
+    <p class="text-muted mb-4">We represent some of the world’s top 300 universities according to QS World Rankings 2025</p>
+
+    <div class="overflow-hidden" style="max-width: 900px; margin: auto;">
+      <div class="university-slider d-flex transition" id="universitySlider">
+        <!-- Group 1 -->
+        <div class="university-group">
+          <div class="university-card"><img src="images/nus.png" alt="NUS" width="120"></div>
+          <div class="university-card"><img src="images/mcgill.jpg" alt="McGill" width="120"></div>
+        </div>
+        <!-- Group 2 -->
+        <div class="university-group">
+          <div class="university-card"><img src="images/berk.jpeg" alt="Berkeley" width="120"></div>
+          <div class="university-card"><img src="images/monash.webp" alt="Monash" width="120"></div>
+        </div>
+        <!-- Group 3 -->
+        <div class="university-group">
+          <div class="university-card"><img src="images/unsw.png" alt="UNSW" width="120"></div>
+          <div class="university-card"><img src="images/queensland.jpg" alt="UQ" width="120"></div>
+        </div>
+        <!-- Group 4 -->
+        <div class="university-group">
+          <div class="university-card"><img src="images/tum.png" alt="TUM" width="120"></div>
+          <div class="university-card"><img src="images/bristol.jpeg" alt="Bristol" width="120"></div>
+        </div>
+        <!-- Group 5 (Hidden initially, appears on scroll) -->
+        <div class="university-group">
+          <div class="university-card"><img src="images/penn_state.png" alt="Penn State" width="120"></div>
+          <div class="university-card"><img src="images/nicosia.png" alt="Other Univ" width="120"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-3">
+      <a href="javascript:void(0)" class="text-danger fw-bold" onclick="slideUniversities()">More Universities &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<!-- Services Section -->
+  <div class="container-fluid p-0">
+    <div class="text-center py-4">
+      <h3 class="section-title">UKCoSA Global Services</h3>
+    </div>
+  <!-- Section: For Students -->
+  <section class="section-bg student-bg py-5">
+    <div class="container">
+      <div class="row align-items-center flex-column flex-md-row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <h4 class="sub-title fw-bold">For Students</h4>
+          <p>With a keen ear for your choices and preferences, our counselling experience is so seamless that you will land in your dream university!</p>
+          <ul>
+            <li>Virtual Coaching and Counselling</li>
+            <li>Applications, Admissions & Visas</li>
+            <li>High Value Scholarships and Study Loans</li>
+          </ul>
+          <a href="study-abroad.html" class="text-decoration-none">See More &rarr;</a>
+        </div>
+        <div class="col-md-6 text-center">
+          <div class="image-cropper">
+            <img src="images/stu.jpg" alt="Student" class="img-fluid">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: For Partners -->
+  <section class="section-bg partner-bg py-5">
+    <div class="container">
+      <div class="row align-items-center flex-column flex-md-row-reverse">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <h4 class="sub-title fw-bold">For Partners</h4>
+          <p>Partner with UKCoSA Global and unlock the power of innovation to elevate your international education journey.</p>
+          <ul>
+            <li>Tailored digital solutions crafted to fit your academic goals</li>
+            <li>Exclusive interactive sessions with university delegates and our seasoned counsellors</li>
+            <li>Comprehensive guidance from your first query to your final departure</li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-center">
+          <div class="image-cropper">
+            <img src="images/part.avif" alt="Student" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: For Franchisees -->
+  <section class="section-bg franchisee-bg py-5">
+    <div class="container">
+      <div class="row align-items-center flex-column flex-md-row">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <h4 class="sub-title fw-bold">For Franchisees</h4>
+          <p>Launch your growth journey with UKCoSA Global — a rising leader in global education services.</p>
+          <ul>
+            <li>Market-specific strategies built to amplify your outreach</li>
+            <li>End-to-end support in managing events, marketing, and daily operations</li>
+            <li>Unlock exclusive insights from UKCoSA’s extensive expertise and resource bank</li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-center">
+          <div class="image-cropper">
+            <img src="images/franch.avif" alt="Student" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: For Universities -->
+  <section class="section-bg university-bg py-5">
+    <div class="container">
+      <div class="row align-items-center flex-column flex-md-row-reverse">
+        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+          <h4 class="sub-title fw-bold">For Universities</h4>
+          <p>Expand your global footprint and achieve outstanding student recruitment outcomes — all while maintaining the highest standards.</p>
+          <ul>
+            <li>Attract talent from a wide range of international regions</li>
+            <li>Leverage UKCoSA Global’s powerful recruitment ecosystem</li>
+            <li>Strengthen your brand presence in key global markets</li>
+          </ul>
+        </div>
+        <div class="col-md-6 text-center">
+          <div class="image-cropper">
+            <img src="images/uni.jpg" alt="Student" class="img-fluid">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Section: Multi Country Advantage -->
+<section class="section-bg py-5">
+  <div class="container">
+    <div class="row align-items-center flex-column flex-md-row">
+      <!-- Images Column -->
+      <div class="col-md-6 text-center">
+            <img src="images/country.svg" alt="Student" class="img-fluid" style="margin-left: -60px;">
+        </div>
+      <!-- Text Column -->
+      <div class="col-md-6 text-center text-md-start">
+        <h3>UKCoSA Global’s Multi Country Advantage</h3>
+        <p class="fw-semibold mt-4">The World is your Campus!</p>
+        <p>
+          Aspire for more. Choose what suits you the best from 800+ global universities in 33 countries, world over. The choices and opportunities our universities offer are endless!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Centered Heading -->
+<div class="text-center mt-5 py-4">
+  <h3 class="section-title">UKCoSA Global's Tech Advantage Sophisticated Online Platforms</h3>
+</div>
+
+<!-- Section: coursefinder.ai -->
+<section class="section-bg white-bg py-5" style="background-color: #b8d8ef;">
+  <div class="container">
+    <div class="row align-items-center flex-column flex-md-row" >
+      <!-- Text Content -->
+      <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+        <h5 class="sub-title fw-bold">UKCoSA Global's Tech Prowess coursefinder.ai – An Uber-Efficient Online Platform</h5>
+        <p>Welcome to coursefinder.ai, an uber efficient online platform for searching courses and managing applications!</p>
+        <ul class="list-unstyled tick-list">
+          <li>Search Near Perfect, ‘eligible’ courses</li>
+          <li>‘One’ application, ‘multiple’ courses & universities</li>
+          <li>Project commissions and process applications</li>
+          <li>Submit & manage unlimited applications</li>
+          <li>Enhance revenues through ancillary services</li>
+        </ul>
+      </div>
+      <!-- Image -->
+      <div class="col-md-6 text-center">
+        <img src="images/find.png" alt="Coursefinder Platform" class="img-fluid section-img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section: Elan Loans -->
+<section class="section-bg light-bg py-5" style="background-color: #bee6e6;">
+  <div class="container">
+    <div class="row align-items-center flex-column flex-md-row-reverse">
+      <!-- Text Content -->
+      <div class="col-md-6 text-center text-md-start mb-4 mb-md-0">
+        <h5 class="sub-title fw-bold">Fly High with Elan Loans</h5>
+        <p>Availing an education loan to study in your dream university has never been easier!</p>
+        <ul class="list-unstyled tick-list">
+          <li>Study Loans through 20 leading banks</li>
+          <li>Financial structuring to suit your university</li>
+          <li>Hassle free documentation</li>
+          <li>Pre-visa disbursal of loans</li>
+          <li>Forex & Travel Insurance</li>
+        </ul>
+      </div>
+      <!-- Image -->
+      <div class="col-md-6 text-center">
+        <img src="images/elan.svg" alt="Elan Loans" class="img-fluid section-img" style="margin-left: -40px;">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="py-5" style="background-color: #f8f9fa; overflow-x: hidden;">
+  <div class="container position-relative" style="max-width: 1140px;">
+    <h2 class="text-center fw-bold mb-5">🌟 Student Success Story | UKCoSA Global 🌟</h2>
+    <div id="successStoriesCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Gujarat to the University of Bristol 🇬🇧</strong></p>
+                  <p>"UKCoSA Global gave me an opportunity that once felt impossible — a chance to study abroad and truly pursue my dreams."</p>
+                  <p>I’m Manish Vaghela, coming from a humble background in Gujarat, India. As the first in my family to study internationally, this journey has been nothing short of transformative.</p>
+                  <p>Thanks to the unwavering support and personalised guidance from UKCoSA Global, I am now pursuing an MSc in Engineering with Management at the prestigious University of Bristol — and that too with a Fully Funded Government of India Scholarship.</p>
+                  <p>Words fall short when I say — Ravi Saxena sir is like God for me. He went above and beyond to support me when I needed it the most. 🙏</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Buxar, Bihar to a Fully Funded Scholarship in the UK 🇬🇧</strong></p>
+                  <p>I’m Abid Hassan from Buxar, Bihar, and I’m incredibly thankful to UKCoSA Global for guiding me through every step of my journey to studying abroad.</p>
+                  <p>From handling the complex admission process to supporting me in securing a Fully Funded Government Scholarship, their expert guidance made everything smooth and stress-free.</p>
+                  <p>I’m now pursuing MSc Management (CSR and Sustainability) at a top UK university — something I once thought was beyond my reach.<br>UKCoSA Global made it possible through their dedication, patience, and step-by-step support.</p>
+                  <p>Thank you to the entire team, especially for making this life-changing opportunity a reality.🙏</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Delhi to the University of Bristol 🇬🇧</strong></p>
+                  <p>I’m Karan from Delhi, and I’m thrilled to share that I’ve achieved my dream of studying at the prestigious University of Bristol 🇬🇧 — all thanks to UKCoSA Global and my mentor’s incredible support.</p>
+                  <p>From guiding me through the admission process to helping me secure a Fully Funded Scholarship, their step-by-step assistance made my entire journey smooth, stress-free, and empowering.</p>
+                  <p>Today, I’m proudly pursuing an MSc in Engineering and Management, and this life-changing opportunity wouldn’t have been possible without the unwavering support of UKCoSA Global.</p>
+                  <p>Thank you for believing in me and helping turn my dream into reality.🙏🎓</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Buxar, Bihar to a Fully Funded Scholarship in the UK 🇬🇧</strong></p>
+                  <p>I’m Abid Hassan from Buxar, Bihar, and I’m incredibly thankful to UKCoSA Global for guiding me through every step of my journey to studying abroad.</p>
+                  <p>From handling the complex admission process to supporting me in securing a Fully Funded Government Scholarship, their expert guidance made everything smooth and stress-free.</p>
+                  <p>I’m now pursuing MSc Management (CSR and Sustainability) at a top UK university — something I once thought was beyond my reach.<br>UKCoSA Global made it possible through their dedication, patience, and step-by-step support.</p>
+                  <p>Thank you to the entire team, especially for making this life-changing opportunity a reality. 🙏</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Delhi to the University of Bristol 🇬🇧</strong></p>
+                  <p>I’m Karan from Delhi, and I’m thrilled to share that I’ve achieved my dream of studying at the prestigious University of Bristol 🇬🇧 — all thanks to UKCoSA Global and my mentor’s incredible support.</p>
+                  <p>From guiding me through the admission process to helping me secure a Fully Funded Scholarship, their step-by-step assistance made my entire journey smooth, stress-free, and empowering.</p>
+                  <p>Today, I’m proudly pursuing an MSc in Engineering and Management, and this life-changing opportunity wouldn’t have been possible without the unwavering support of UKCoSA Global.</p>
+                  <p>Thank you for believing in me and helping turn my dream into reality.🙏🎓</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Nagpur to Imperial College London 🇬🇧</strong></p>
+                  <p>I’m Prachi from Nagpur, and I feel honoured to share that I’ve turned my dream of studying at the globally renowned Imperial College London 🇬🇧 into a reality — all thanks to UKCoSA Global and the sincere mentorship I received.</p>
+                  <p>Their step-by-step guidance throughout the admission process and scholarship application helped me secure the prestigious Rajarshi Shahu Maharaj Scholarship by the Government of Maharashtra, fully funding my education.</p>
+                  <p>Today, I’m pursuing my dream with confidence, and this journey would’ve been impossible without their unwavering support.</p>
+                  <p>Thank you, Ravi Sir, for mentoring me like family and helping me reach where I am today. 🙏🎓</p>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls (arrows moved out by -150px) -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#successStoriesCarousel" data-bs-slide="prev"
+        style="position: absolute; top: 50%; left: -170px; transform: translateY(-50%); z-index: 10;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"
+          style="background-color: #000; padding: 15px; border-radius: 50%;"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#successStoriesCarousel" data-bs-slide="next"
+        style="position: absolute; top: 50%; right: -170px; transform: translateY(-50%); z-index: 10;">
+        <span class="carousel-control-next-icon" aria-hidden="true"
+          style="background-color: #000; padding: 15px; border-radius: 50%;"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container text-md-start text-center">
+    <div class="row">
+
+      <!-- Newsletter Signup -->
+      <div class="col-12 mb-4 text-center">
+        <h5 class="fw-bold mb-3">Stay updated with UKCoSA Global</h5>
+        <div class="row justify-content-center">
+          <div class="col-md-3 mb-2">
+            <input type="email" class="form-control" placeholder="Email ID" />
+          </div>
+          <div class="col-md-3 mb-2">
+            <select class="form-select">
+              <option selected disabled>I'm Interested in</option>
+              <option>Studying Abroad</option>
+              <option>Test Prep</option>
+              <option>Application Assistance</option>
+              <option>Visa Guidance</option>
+              <option>Post-Arrival Services</option>
+              <option>Education-Loan Assistance</option>
+            </select>
+          </div>
+          <div class="col-md-2 mb-2">
+            <button class="btn btn-warning w-100">Register Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- About & Links -->
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold"><u>About UKCoSA Global</u></h6>
+        <p><small>
+          We are a rapidly expanding EdTech company with a global presence, streamlining international student recruitment by bridging students, education consultants, and universities worldwide through our advanced digital platform – coursefinder.ai.
+        </small>
+        </p>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Study Destinations</h6>
+        <ul class="list-unstyled small">
+          <li><a href="usa.html">United States</a></li>
+          <li><a href="canada.html">Canada</a></li>
+          <li><a href="uk.html">United Kingdom</a></li>
+          <li><a href="australia.html">Australia</a></li>
+          <li><a href="europe.html">Europe</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Services for Students</h6>
+        <ul class="list-unstyled small">
+          <li><a href="study-abroad.html">Counselling</a></li>
+          <li><a href="study-abroad.html#t1">Test Preparation</a></li>
+          <li><a href="study-abroad.html#aa">Application & Admission</a></li>
+          <li><a href="study-abroad.html#vg">Visa Processing</a></li>
+          <li><a href="study-abroad.html#ela">Education-Loan</a></li>
+          <li><a href="study-abroad.html#pa">Post-Arrival Services</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Company</h6>
+        <ul class="list-unstyled small">
+          <li>About Us</li>
+          <li>Careers <span class="badge bg-primary">We're Hiring!</span></li>
+          <li>News & Events</li>
+          <li>CSR Policy</li>
+          <li>POSH Policy</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Accreditation Logos -->
+    <div class="text-center mt-4 mb-3">
+      <h5 class="fw-bold"><u>Global Accreditations & Recognitions</u></h5>
+      <div class="d-flex justify-content-center gap-4 flex-wrap mt-5 mb-2">
+        <img src="images/axis-bank.png.webp" alt="Accreditation 1" height="40" />
+        <img src="images/hdfc.png" alt="PIER" height="40" />
+        <img src="images/duolingo.webp" alt="AAERI" height="40" />
+        <img src="images/upgrad.webp" alt="Education UK" height="40" />
+        <img src="images/flywire.png" alt="Other Accred" height="40" />
+        <img src="images/pte.png" alt="Other Accred" height="40" />
+      </div>
+    </div>
+
+    <!-- Social & Legal -->
+    <div class="container mt-4 border-top pt-3">
+      <div class="row align-items-center">
+        <!-- Centered copyright -->
+        <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <div class="small">Copyright © UKCoSA Global 2004–2025</div>
+        </div>
+
+        <!-- Right-aligned social icons -->
+        <div class="col-12 col-md-6 text-center text-md-end">
+          <a href="https://www.facebook.com/ukcosaglobal" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/ukcosaglobal/" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com/ukcosaglobal/" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+          <a href="https://x.com/ukcosaglobal" class="text-white"><i class="bi bi-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const slider = document.getElementById('universitySlider');
+  const groupWidth = 200; // width of 1 column (including margin)
+  const totalGroups = slider.children.length;
+  const visibleGroups = 4;
+  let currentGroupIndex = 0;
+
+  function slideUniversities() {
+    currentGroupIndex += 1;
+    if (currentGroupIndex > totalGroups - visibleGroups) {
+      currentGroupIndex = 0;
+    }
+    slider.style.transform = `translateX(-${currentGroupIndex * groupWidth}px)`;
+  }
+</script>
+
+<script>
+  const services = [
+    { name: "Study-abroad Counselling", link: "study-abroad.html" },
+    { name: "Test Preparation", link: "study-abroad.html#t1" },
+    { name: "Application Assistance", link: "study-abroad.html#aa" },
+    { name: "Visa Guidance", link: "study-abroad.html#vg" },
+    { name: "Post-Arrival Services", link: "study-abroad.html#pa" },
+    { name: "Education Loan Assistance", link: "study-abroad.html#ela" }
+  ];
+
+  const input = document.getElementById("serviceSearch");
+  const suggestionsBox = document.getElementById("suggestions");
+  let currentFocus = -1; // Index of focused suggestion
+
+  input.addEventListener("input", function () {
+    const val = this.value.trim().toLowerCase();
+    suggestionsBox.innerHTML = "";
+    currentFocus = -1;
+
+    if (val === "") return;
+
+    const filtered = services.filter(service => service.name.toLowerCase().startsWith(val));
+
+    filtered.forEach((service, index) => {
+      const li = document.createElement("li");
+      li.classList.add("list-group-item", "list-group-item-action");
+      li.textContent = service.name;
+      li.setAttribute("data-link", service.link);
+      li.style.cursor = "pointer";
+      li.onclick = () => window.location.href = service.link;
+      suggestionsBox.appendChild(li);
+    });
+  });
+
+  input.addEventListener("keydown", function (e) {
+    const items = suggestionsBox.getElementsByTagName("li");
+
+    if (e.key === "ArrowDown") {
+      currentFocus++;
+      addActive(items);
+    } else if (e.key === "ArrowUp") {
+      currentFocus--;
+      addActive(items);
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (currentFocus > -1 && items[currentFocus]) {
+        items[currentFocus].click();
+      } else {
+        // If typed text matches exactly
+        const match = services.find(service => service.name.toLowerCase() === input.value.trim().toLowerCase());
+        if (match) window.location.href = match.link;
+      }
+    }
+  });
+
+  function addActive(items) {
+    if (!items) return;
+    removeActive(items);
+    if (currentFocus >= items.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = items.length - 1;
+    items[currentFocus].classList.add("active");
+  }
+
+  function removeActive(items) {
+    for (let i = 0; i < items.length; i++) {
+      items[i].classList.remove("active");
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+    if (!input.contains(e.target)) {
+      suggestionsBox.innerHTML = "";
+      currentFocus = -1;
+    }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

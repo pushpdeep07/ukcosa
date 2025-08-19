@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Study in USA | UKCoSA Global</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+    body{
+      padding-top: 40px;
+    }
+    .hero-section {
+      background-image: url('images/usa.png'); /* Add high-quality USA building image */
+      background-size: cover;
+      background-position: right center;
+      color: rgb(14, 11, 11);
+      padding: 50px 100px;
+      min-height: 80vh;
+      display: flex;
+      align-items: top;
+    }
+
+    .hero-overlay {
+      padding: 40px 90px;
+      border-radius: 10px;
+    }
+
+    .highlight-section {
+      background-color: #fff0cc; /* Light green */
+      padding: 60px 20px;
+    }
+
+    .study-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    /* Footer section */
+    footer {
+      background-color: #1e1e1e;
+      color: #fff;
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    footer h6 {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    footer ul {
+      padding: 0;
+      list-style: none;
+    }
+
+    footer ul li {
+      margin-bottom: 6px;
+      color: #ccc;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    footer .form-control,
+    footer .form-select {
+      border-radius: 0.25rem;
+      border: none;
+    }
+
+    footer .btn-warning {
+      font-weight: 600;
+      background-color: #f5a623;
+      border: none;
+    }
+
+    footer .btn-warning:hover {
+      background-color: #d48806;
+    }
+
+    /* Footer social icons */
+    footer .bi {
+      font-size: 1.25rem;
+      transition: color 0.3s ease;
+    }
+
+    footer .bi:hover {
+      color: #f5a623;
+    }
+
+    /* Responsive logo strip */
+    footer .d-flex img {
+      max-height: 40px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Navbar -->
+<nav class="navbar bg-dark navbar-expand-lg fixed-top shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold text-white d-flex align-items-center" href="#">
+      <img src="images/logo6.png" alt="UKCoSA Logo" height="55" width="70" class="me-2">
+      UKCoSA Global
+    </a>
+
+    <!-- Search (Large only) -->
+    <div class="d-none d-lg-block me-3 position-relative" style="width: 220px;">
+      <input class="form-control search-bar" id="serviceSearch" type="text" placeholder="Search services..." aria-label="Search" autocomplete="off">
+      <ul id="suggestions" class="list-group position-absolute w-100" style="z-index: 1000;"></ul>
+    </div>
+
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+        <li class="nav-item mx-1"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item mx-1"><a class="nav-link text-white" href="about.html">About Us</a></li>
+        <li class="nav-item dropdown mx-1">
+      <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+      <ul class="dropdown-menu bg-dark">
+        <li><a class="dropdown-item text-white" href="study-abroad.html">Study Abroad Counseling</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#t1">Test Preparation</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#aa">Application Assistance</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#vg">Visa Guidance</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#pa">Post-Arrival Services</a></li>
+        <li><a class="dropdown-item text-white" href="study-abroad.html#ela">Education-Loan Assistance</a></li>
+      </ul>
+    </li>
+    <li class="nav-item dropdown mx-1">
+      <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">Destinations</a>
+      <ul class="dropdown-menu bg-dark">
+        <li><a class="dropdown-item text-white" href="usa.html">USA</a></li>
+        <li><a class="dropdown-item text-white" href="uk.html">UK</a></li>
+        <li><a class="dropdown-item text-white" href="canada.html">Canada</a></li>
+        <li><a class="dropdown-item text-white" href="australia.html">Australia</a></li>
+        <li><a class="dropdown-item text-white" href="europe.html">Europe</a></li>
+      </ul>
+    </li>
+    <li class="nav-item mx-1"><a class="nav-link text-white" href="blog.html">Blog</a></li>
+    <li class="nav-item mx-1"><a class="nav-link text-white" href="contact_us.html">Contact Us</a></li>
+    <li class="nav-item mx-1" style="padding-left: 10px;">
+      <a class="btn btn-primary text-white" href="#">Student Registration</a>
+    </li>
+  </ul>
+</div>
+
+</div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section mt-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="hero-overlay">
+          <h1 class="display-5 fw-bold ">Study in USA</h1>
+          <p class="mt-4 fw-semibold">The United States of America has long been a global hub for excellence in higher education, research, and innovation. With its vast array of top-ranked universities, advanced technological resources, and a dynamic multicultural society, the USA draws students from across the world. At UKCoSA Global, we support you throughout your journey — from choosing the ideal university to obtaining your visa — empowering you to achieve your academic and professional goals with ease and confidence.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Study in USA Section -->
+<section class="highlight-section">
+  <div class="container">
+    <h2 class="text-center mb-5">Why Study in the USA?</h2>
+
+    <!-- Point 1 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <h4>1. World-Class Academic Institutions</h4>
+        <p>The USA is home to more than half of the world’s top 50 universities, including Ivy League schools and renowned public research institutions. These universities offer highly specialized programs across disciplines, led by experts at the forefront of their fields.</p>
+        <p>In addition to academic prestige, US institutions focus on innovation, critical thinking, and practical learning. Through research opportunities, cutting-edge laboratories, and real-world projects, students gain hands-on experience that strengthens their professional and academic foundation.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="images/unii.jpg" alt="Top USA Universities" class="study-img" style="height: 250px; width: 450px; border: 3px solid black;" />
+      </div>
+
+    </div>
+    <br>
+    <br>
+
+    <!-- Point 2 -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-6">
+        <h4>2. Diverse Course Options and Flexible Curriculum</h4>
+        <p>One of the greatest strengths of the US education system is its flexibility. Students can choose from a wide range of majors, minors, and interdisciplinary courses, allowing them to tailor their education to match their interests and career goals.</p>
+        <p>Moreover, undergraduate students don’t need to declare a major until the end of their second year, giving them the freedom to explore. Graduate programs also offer electives and specializations, which ensure that students gain both depth and breadth in their chosen field.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="images/curr.webp" alt="Flexible Courses in USA" class="study-img" style="height: 250px; width: 450px; border: 3px solid black;"/>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- Point 3 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <h4>3. Global Recognition and Career Prospects</h4>
+        <p>A degree from a US university carries immense value worldwide. Employers across the globe respect the academic rigor, diverse experiences, and skill sets acquired from US institutions, often giving preference to candidates with US education backgrounds.</p>
+        <p>Additionally, most universities have strong industry connections and offer career services that include internships, networking events, and job placements. Optional Practical Training (OPT) and Curricular Practical Training (CPT) programs further allow international students to gain professional experience in the US after graduation.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="images/global.png" alt="Top USA Universities" class="study-img" style="height: 250px; width: 450px; border: 3px solid black;" />
+      </div>
+
+    </div>
+    <br>
+    <br>
+
+    <!-- Point 4 -->
+    <div class="row align-items-center mb-5 flex-md-row-reverse">
+      <div class="col-md-6">
+        <h4>4. Multicultural Environment and Inclusive Campus Life</h4>
+        <p>With students from nearly every country in the world, US campuses offer a vibrant and inclusive environment where cultural exchange thrives. This diversity enhances classroom discussions, broadens perspectives, and fosters global friendships.</p>
+        <p>Universities also provide extensive support for international students through orientation programs, counseling, student clubs, and cultural events. From celebrating Diwali and Lunar New Year to participating in global festivals, students feel at home while embracing new experiences.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="images/cult.jpg" alt="Flexible Courses in USA" class="study-img" style="height: 250px; width: 450px; border: 3px solid black;"/>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <!-- Point 5 -->
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <h4>5. Advanced Research and Innovation Opportunities</h4>
+        <p>The US is a global leader in research and development, with billions of dollars invested annually in science, technology, medicine, and humanities. Students get the chance to work alongside top researchers and contribute to groundbreaking innovations.</p>
+        <p>Whether it's through assistantships, funded research projects, or collaborative labs, students are encouraged to challenge norms and explore new ideas. This environment not only nurtures academic excellence but also sparks entrepreneurial thinking and future-ready skills.</p>
+      </div>
+      <div class="col-md-6 d-flex justify-content-center">
+        <img src="images/research.jpg" alt="Top USA Universities" class="study-img" style="height: 250px; width: 450px; border: 3px solid black;" />
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section style="background-color: rgb(231, 192, 199); padding: 50px 0;">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold">Popular Universities in USA</h2>
+    <div class="row g-4">
+      <!-- Row 1 -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/connecticut.png" alt="UConn" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">University of Connecticut, Storrs, Connecticut (Public Ivy)</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/hopkins.png" alt="Johns Hopkins" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">Johns Hopkins University, Baltimore, Maryland (School of Engineering – Only PG)</p>
+        </div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/arizona.png" alt="ASU" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">Arizona State University, Phoenix (Arizona) & Los Angeles (California) Campus</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/amherst.png" alt="UMass" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">University of Massachusetts Amherst, Amherst, Massachusetts (Masters Programs)</p>
+        </div>
+      </div>
+
+      <!-- Row 3 -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/california.png" alt="UCR" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">University of California, Riverside, California (Graduate Business Programs & College of Engineering and UCR Extension)</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/virginia.png" alt="Virginia Tech" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">Virginia Tech Language and Culture Institute, Blacksburg, Virginia (UG and PG Pathways)</p>
+        </div>
+      </div>
+
+      <!-- Row 4 -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/florida.png" alt="USF" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">University of South Florida, Tampa, Florida (Only UG)</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/tucson.png" alt="UArizona" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">University of Arizona, Tucson, Arizona</p>
+        </div>
+      </div>
+
+      <!-- Row 5 -->
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/drexel.png" alt="Drexel" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">Drexel University, Philadelphia, Pennsylvania (College of Engineering, UG Gateways and IEP)</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="d-flex align-items-center bg-white rounded p-3 shadow-sm">
+          <img src="images/delaware.png" alt="Delaware" style="width: 60px; height: 60px; object-fit: contain;" class="me-3">
+          <p class="mb-0">University of Delaware, Newark, Delaware (Only UG)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-5" style="background-color: #f8f9fa; overflow-x: hidden;">
+  <div class="container position-relative" style="max-width: 1140px;">
+    <h2 class="text-center fw-bold mb-5">👩‍🎓 What our Sudents say about us 👨‍🎓</h2>
+    <div id="successStoriesCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Gujarat to the University of Bristol 🇬🇧</strong></p>
+                  <p>"UKCoSA Global gave me an opportunity that once felt impossible — a chance to study abroad and truly pursue my dreams."</p>
+                  <p>I’m Manish Vaghela, coming from a humble background in Gujarat, India. As the first in my family to study internationally, this journey has been nothing short of transformative.</p>
+                  <p>Thanks to the unwavering support and personalised guidance from UKCoSA Global, I am now pursuing an MSc in Engineering with Management at the prestigious University of Bristol — and that too with a Fully Funded Government of India Scholarship.</p>
+                  <p>Words fall short when I say — Ravi Saxena sir is like God for me. He went above and beyond to support me when I needed it the most. 🙏</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Buxar, Bihar to a Fully Funded Scholarship in the UK 🇬🇧</strong></p>
+                  <p>I’m Abid Hassan from Buxar, Bihar, and I’m incredibly thankful to UKCoSA Global for guiding me through every step of my journey to studying abroad.</p>
+                  <p>From handling the complex admission process to supporting me in securing a Fully Funded Government Scholarship, their expert guidance made everything smooth and stress-free.</p>
+                  <p>I’m now pursuing MSc Management (CSR and Sustainability) at a top UK university — something I once thought was beyond my reach.<br>UKCoSA Global made it possible through their dedication, patience, and step-by-step support.</p>
+                  <p>Thank you to the entire team, especially for making this life-changing opportunity a reality.🙏</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Delhi to the University of Bristol 🇬🇧</strong></p>
+                  <p>I’m Karan from Delhi, and I’m thrilled to share that I’ve achieved my dream of studying at the prestigious University of Bristol 🇬🇧 — all thanks to UKCoSA Global and my mentor’s incredible support.</p>
+                  <p>From guiding me through the admission process to helping me secure a Fully Funded Scholarship, their step-by-step assistance made my entire journey smooth, stress-free, and empowering.</p>
+                  <p>Today, I’m proudly pursuing an MSc in Engineering and Management, and this life-changing opportunity wouldn’t have been possible without the unwavering support of UKCoSA Global.</p>
+                  <p>Thank you for believing in me and helping turn my dream into reality.🙏🎓</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Buxar, Bihar to a Fully Funded Scholarship in the UK 🇬🇧</strong></p>
+                  <p>I’m Abid Hassan from Buxar, Bihar, and I’m incredibly thankful to UKCoSA Global for guiding me through every step of my journey to studying abroad.</p>
+                  <p>From handling the complex admission process to supporting me in securing a Fully Funded Government Scholarship, their expert guidance made everything smooth and stress-free.</p>
+                  <p>I’m now pursuing MSc Management (CSR and Sustainability) at a top UK university — something I once thought was beyond my reach.<br>UKCoSA Global made it possible through their dedication, patience, and step-by-step support.</p>
+                  <p>Thank you to the entire team, especially for making this life-changing opportunity a reality. 🙏</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Delhi to the University of Bristol 🇬🇧</strong></p>
+                  <p>I’m Karan from Delhi, and I’m thrilled to share that I’ve achieved my dream of studying at the prestigious University of Bristol 🇬🇧 — all thanks to UKCoSA Global and my mentor’s incredible support.</p>
+                  <p>From guiding me through the admission process to helping me secure a Fully Funded Scholarship, their step-by-step assistance made my entire journey smooth, stress-free, and empowering.</p>
+                  <p>Today, I’m proudly pursuing an MSc in Engineering and Management, and this life-changing opportunity wouldn’t have been possible without the unwavering support of UKCoSA Global.</p>
+                  <p>Thank you for believing in me and helping turn my dream into reality.🙏🎓</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card h-100 shadow rounded" style="border: 5px solid navy; min-height: 100%;">
+                <div class="p-3">
+                  <p><strong>From Nagpur to Imperial College London 🇬🇧</strong></p>
+                  <p>I’m Prachi from Nagpur, and I feel honoured to share that I’ve turned my dream of studying at the globally renowned Imperial College London 🇬🇧 into a reality — all thanks to UKCoSA Global and the sincere mentorship I received.</p>
+                  <p>Their step-by-step guidance throughout the admission process and scholarship application helped me secure the prestigious Rajarshi Shahu Maharaj Scholarship by the Government of Maharashtra, fully funding my education.</p>
+                  <p>Today, I’m pursuing my dream with confidence, and this journey would’ve been impossible without their unwavering support.</p>
+                  <p>Thank you, Ravi Sir, for mentoring me like family and helping me reach where I am today. 🙏🎓</p>
+               </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Controls (arrows moved out by -150px) -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#successStoriesCarousel" data-bs-slide="prev"
+        style="position: absolute; top: 50%; left: -170px; transform: translateY(-50%); z-index: 10;">
+        <span class="carousel-control-prev-icon" aria-hidden="true"
+          style="background-color: #000; padding: 15px; border-radius: 50%;"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#successStoriesCarousel" data-bs-slide="next"
+        style="position: absolute; top: 50%; right: -170px; transform: translateY(-50%); z-index: 10;">
+        <span class="carousel-control-next-icon" aria-hidden="true"
+          style="background-color: #000; padding: 15px; border-radius: 50%;"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="py-5" style="background-color: #aebbd4;">
+  <div class="container d-flex justify-content-center">
+    <div class="w-100" style="max-width: 800px;">
+      <h2 class="text-center fw-bold mb-4">FAQs About Studying in the USA</h2>
+
+      <div class="accordion" id="kcFaqAccordion">
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false">
+              Can you work while studying in the United States?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+             Yes, students can work on-campus or participate in Optional Practical Training (OPT) and Curricular Practical Training (CPT).
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false">
+              What are the English Language Proficiency requirements?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+              Most institutions require TOEFL or IELTS scores for admission.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false">
+              What are the other Standardized Tests for USA?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+              SAT, ACT, GRE, and GMAT are commonly accepted for undergraduate and graduate programs.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">
+               What are the popular courses in the USA?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+              Popular fields include Engineering, Business, Computer Science, Public Health, and Applied Sciences.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingFive">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false">
+              Are any scholarships available for international students in USA?
+            </button>
+          </h2>
+          <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+              Yes, numerous universities offer merit-based and need-based scholarships for international students.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">
+               How does UKCoSA Global help me choose the right university in the USA?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+             We offer personalized guidance based on your profile, helping you select universities that match your goals and preferences.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item mb-3">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false">
+                What support does UKCoSA Global offer during the visa application process?
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#kcFaqAccordion">
+            <div class="accordion-body">
+              We assist with documentation, interview prep, and the entire visa application process to boost your chances of approval.
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+ <!-- Footer Section -->
+<footer class="bg-dark text-white pt-5 pb-4">
+  <div class="container text-md-start text-center">
+    <div class="row">
+
+      <!-- Newsletter Signup -->
+      <div class="col-12 mb-4 text-center">
+        <h5 class="fw-bold mb-3">Stay updated with UKCoSA Global</h5>
+        <div class="row justify-content-center">
+          <div class="col-md-3 mb-2">
+            <input type="email" class="form-control" placeholder="Email ID" />
+          </div>
+          <div class="col-md-3 mb-2">
+            <select class="form-select">
+              <option selected disabled>I'm Interested in</option>
+              <option>Studying Abroad</option>
+              <option>Test Prep</option>
+              <option>Application Assistance</option>
+              <option>Visa Guidance</option>
+              <option>Post-Arrival Services</option>
+              <option>Education-Loan Assistance</option>
+            </select>
+          </div>
+          <div class="col-md-2 mb-2">
+            <button class="btn btn-warning w-100">Register Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- About & Links -->
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold"><u>About UKCoSA Global</u></h6>
+        <p><small>
+          We are a rapidly expanding EdTech company with a global presence, streamlining international student recruitment by bridging students, education consultants, and universities worldwide through our advanced digital platform – coursefinder.ai.
+        </small>
+        </p>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Study Destinations</h6>
+        <ul class="list-unstyled small">
+          <li><a href="usa.html">United States</a></li>
+          <li><a href="canada.html">Canada</a></li>
+          <li><a href="uk.html">United Kingdom</a></li>
+          <li><a href="australia.html">Australia</a></li>
+          <li><a href="europe.html">Europe</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Services for Students</h6>
+        <ul class="list-unstyled small">
+          <li><a href="study-abroad.html">Counselling</a></li>
+          <li><a href="study-abroad.html#t1">Test Preparation</a></li>
+          <li><a href="study-abroad.html#aa">Application & Admission</a></li>
+          <li><a href="study-abroad.html#vg">Visa Processing</a></li>
+          <li><a href="study-abroad.html#ela">Education-Loan</a></li>
+          <li><a href="study-abroad.html#pa">Post-Arrival Services</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-2 ms-auto mb-4">
+        <h6 class="text-uppercase fw-bold">Company</h6>
+        <ul class="list-unstyled small">
+          <li>About Us</li>
+          <li>Careers <span class="badge bg-primary">We're Hiring!</span></li>
+          <li>News & Events</li>
+          <li>CSR Policy</li>
+          <li>POSH Policy</li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Accreditation Logos -->
+    <div class="text-center mt-4 mb-3">
+      <h5 class="fw-bold"><u>Global Accreditations & Recognitions</u></h5>
+      <div class="d-flex justify-content-center gap-4 flex-wrap mt-5 mb-2">
+        <img src="images/axis-bank.png.webp" alt="Accreditation 1" height="40" />
+        <img src="images/hdfc.png" alt="PIER" height="40" />
+        <img src="images/duolingo.webp" alt="AAERI" height="40" />
+        <img src="images/upgrad.webp" alt="Education UK" height="40" />
+        <img src="images/flywire.png" alt="Other Accred" height="40" />
+        <img src="images/pte.png" alt="Other Accred" height="40" />
+      </div>
+    </div>
+
+    <!-- Social & Legal -->
+    <div class="container mt-4 border-top pt-3">
+      <div class="row align-items-center">
+        <!-- Centered copyright -->
+        <div class="col-12 col-md-6 text-center text-md-start mb-2 mb-md-0">
+          <div class="small">Copyright © UKCoSA Global 2004–2025</div>
+        </div>
+
+        <!-- Right-aligned social icons -->
+        <div class="col-12 col-md-6 text-center text-md-end">
+          <a href="https://www.facebook.com/ukcosaglobal" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.linkedin.com/company/ukcosaglobal/" class="text-white me-2"><i class="bi bi-linkedin"></i></a>
+          <a href="https://www.instagram.com/ukcosaglobal/" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+          <a href="https://x.com/ukcosaglobal" class="text-white"><i class="bi bi-twitter"></i></a>
+        </div>  
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  const services = [
+    { name: "Study-abroad Counselling", link: "study-abroad.html" },
+    { name: "Test Preparation", link: "study-abroad.html#t1" },
+    { name: "Application Assistance", link: "study-abroad.html#aa" },
+    { name: "Visa Guidance", link: "study-abroad.html#vg" },
+    { name: "Post-Arrival Services", link: "study-abroad.html#pa" },
+    { name: "Education Loan Assistance", link: "study-abroad.html#ela" }
+  ];
+
+  const input = document.getElementById("serviceSearch");
+  const suggestionsBox = document.getElementById("suggestions");
+  let currentFocus = -1; // Index of focused suggestion
+
+  input.addEventListener("input", function () {
+    const val = this.value.trim().toLowerCase();
+    suggestionsBox.innerHTML = "";
+    currentFocus = -1;
+
+    if (val === "") return;
+
+    const filtered = services.filter(service => service.name.toLowerCase().startsWith(val));
+
+    filtered.forEach((service, index) => {
+      const li = document.createElement("li");
+      li.classList.add("list-group-item", "list-group-item-action");
+      li.textContent = service.name;
+      li.setAttribute("data-link", service.link);
+      li.style.cursor = "pointer";
+      li.onclick = () => window.location.href = service.link;
+      suggestionsBox.appendChild(li);
+    });
+  });
+
+  input.addEventListener("keydown", function (e) {
+    const items = suggestionsBox.getElementsByTagName("li");
+
+    if (e.key === "ArrowDown") {
+      currentFocus++;
+      addActive(items);
+    } else if (e.key === "ArrowUp") {
+      currentFocus--;
+      addActive(items);
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (currentFocus > -1 && items[currentFocus]) {
+        items[currentFocus].click();
+      } else {
+        // If typed text matches exactly
+        const match = services.find(service => service.name.toLowerCase() === input.value.trim().toLowerCase());
+        if (match) window.location.href = match.link;
+      }
+    }
+  });
+
+  function addActive(items) {
+    if (!items) return;
+    removeActive(items);
+    if (currentFocus >= items.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = items.length - 1;
+    items[currentFocus].classList.add("active");
+  }
+
+  function removeActive(items) {
+    for (let i = 0; i < items.length; i++) {
+      items[i].classList.remove("active");
+    }
+  }
+
+  document.addEventListener("click", function (e) {
+    if (!input.contains(e.target)) {
+      suggestionsBox.innerHTML = "";
+      currentFocus = -1;
+    }
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

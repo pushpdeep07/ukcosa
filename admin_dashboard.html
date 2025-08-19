@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    h2, h3 {
+      color: #2c3e50;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-bottom: 40px;
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+    th, td {
+      border: 1px solid #e0e0e0;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #ecf0f1;
+    }
+    a {
+      color: #3498db;
+      text-decoration: none;
+      margin-right: 15px;
+    }
+    .logo {
+      max-width: 80px;
+      margin-bottom: 10px;
+    }
+    select.status-dropdown {
+      padding: 5px 10px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      font-size: 14px;
+    }
+
+    /* Toast Styles */
+    .toast {
+      visibility: hidden;
+      min-width: 250px;
+      background-color: #27ae60;
+      color: #fff;
+      text-align: center;
+      border-radius: 4px;
+      padding: 14px;
+      position: fixed;
+      z-index: 1000;
+      right: 20px;
+      top: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.4s ease;
+    }
+    .toast.show {
+      visibility: visible;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <img src="images/logo7.png" alt="Company Logo" class="logo mx-auto d-block">
+  <h2 id="welcome">Welcome</h2>
+  <p><a href="add_admin.html">Click here to add a new admin</a></p>
+  <a href="#" id="logoutBtn">Logout</a>
+
+  <h3>Admin List</h3>
+  <table id="adminTable">
+    <thead>
+      <tr><th>Name</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h3>Students Registered</h3>
+  <table id="studentsTable">
+    <thead>
+      <tr><th>ID</th><th>Full Name</th><th>Country Code</th><th>Mobile Number</th>
+        <th>Email</th><th>Destination</th><th>Study Type</th><th>Area of Study</th><th>Created At</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h3>Enquiries</h3>
+  <table id="enquiriesTable">
+    <thead>
+      <tr><th>ID</th><th>Name</th><th>Email</th><th>Mobile</th><th>City</th>
+        <th>Destination</th><th>Coaching</th><th>Loan</th><th>Status</th><th>Created At</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h3>Counselling Forms</h3>
+  <table id="counsellingTable">
+    <thead>
+      <tr><th>ID</th><th>Name</th><th>Phone</th><th>Email</th><th>Query</th>
+        <th>Destination</th><th>Timeline</th><th>Submitted At</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <h3>Feedback Submissions</h3>
+  <table id="feedbackTable">
+    <thead>
+      <tr><th>ID</th><th>Country</th><th>Full Name</th><th>Email</th><th>Phone</th>
+        <th>Reason</th><th>Message</th><th>File</th><th>Submitted At</th></tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <!-- Toast Message -->
+  <div id="toast" class="toast">Status updated successfully!</div>
+
+<script>
+async function checkSession() {
+  if (!sessionStorage.getItem('admin_logged_in')) {
+    window.location.href = 'admin_login.html';
+    return;
+  }
+  const res = await fetch('admin_backend.php?action=is_logged_in');
+  const data = await res.json();
+  if (!data.logged_in) {
+    sessionStorage.removeItem('admin_logged_in');
+    window.location.href = 'admin_login.html';
+  }
+}
+
+async function loadAdminName() {
+  const res = await fetch('admin_backend.php?action=get_admin_name');
+  const data = await res.json();
+  document.getElementById('welcome').textContent = 'Welcome ' + (data.name || 'Admin');
+}
+
+async function loadDashboard() {
+  const res = await fetch('admin_backend.php?action=fetch_dashboard_data');
+  const data = await res.json();
+
+  if (data.error) {
+    alert(data.error);
+    window.location.href = 'admin_login.html';
+    return;
+  }
+
+  const fillTable = (data, selector, columns, isEnquiry = false) => {
+    const tbody = document.querySelector(selector);
+    tbody.innerHTML = '';
+    data.forEach(row => {
+      const tr = document.createElement('tr');
+      if (isEnquiry) {
+        columns.forEach(col => {
+          const td = document.createElement('td');
+          if (col === 'status') {
+            const select = document.createElement('select');
+            const options = ['Pending', 'In Progress', 'Completed'];
+            options.forEach(option => {
+              const opt = document.createElement('option');
+              opt.value = option;
+              opt.textContent = option;
+              if (row[col] === option) opt.selected = true;
+              select.appendChild(opt);
+            });
+            select.dataset.id = row['id'];
+            select.classList.add('status-dropdown');
+            td.appendChild(select);
+          } else {
+            td.textContent = row[col];
+          }
+          tr.appendChild(td);
+        });
+      } else {
+        tr.innerHTML = columns.map(col => `<td>${row[col]}</td>`).join('');
+      }
+      tbody.appendChild(tr);
+    });
+  };
+
+  fillTable(data.admins, '#adminTable tbody', ['username']);
+  fillTable(data.students, '#studentsTable tbody', ['id', 'full_name', 'country_code', 'mobile_number', 'email', 'destination', 'study_type', 'area_of_study', 'created_at']);
+  fillTable(data.enquiries, '#enquiriesTable tbody', ['id', 'name', 'email', 'mobile', 'city', 'destination', 'coaching', 'loan', 'status', 'created_at'], true);
+  fillTable(data.counselling_forms, '#counsellingTable tbody', ['id', 'name', 'phone', 'email', 'query', 'destination', 'timeline', 'submitted_at']);
+  fillTable(data.feedbacks, '#feedbackTable tbody', ['id', 'country', 'fullname', 'email', 'phone', 'reason', 'message', 'file_name', 'submitted_at']);
+}
+
+// ✅ Show toast for 2.5 seconds
+function showToast(message = "Status updated successfully!") {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.classList.add('show');
+  setTimeout(() => {
+    toast.classList.remove('show');
+  }, 2500);
+}
+
+document.addEventListener('change', async function (e) {
+  if (e.target.classList.contains('status-dropdown')) {
+    const id = e.target.dataset.id;
+    const status = e.target.value;
+    const res = await fetch('admin_backend.php?action=update_enquiry_status', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id, status })
+    });
+    const data = await res.json();
+    if (data.success) {
+      showToast();
+    } else {
+      alert('Failed to update status');
+    }
+  }
+});
+
+document.getElementById('logoutBtn').addEventListener('click', async () => {
+  await fetch('admin_backend.php?action=logout');
+  sessionStorage.removeItem('admin_logged_in');
+  window.location.href = 'admin_login.html';
+});
+
+loadAdminName();
+loadDashboard();
+</script>
+</body>
+</html>

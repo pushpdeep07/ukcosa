@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>UKCoSA Student Registration</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .logo {
+      max-width: 80px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6 bg-white p-4 shadow rounded">
+      <img src="images/logo7.png" alt="Company Logo" class="logo mx-auto d-block">
+      <h4 class="text-center mb-3">Student Registration</h4>
+      <form method="POST" action="student_registration_backend.php">
+        <input type="hidden" name="form_type" value="register">
+        <div class="mb-2"><input type="text" name="full_name" class="form-control" placeholder="Full Name" required></div>
+        <div class="mb-2"><input type="text" name="country_code" class="form-control" placeholder="Country Code (+91)" required></div>
+        <div class="mb-2"><input type="text" name="mobile_number" class="form-control" placeholder="Mobile Number" required></div>
+        <div class="mb-2"><input type="email" name="email" class="form-control" placeholder="Email" required></div>
+        <div class="mb-2">
+          <select name="destination" class="form-select" required>
+            <option value="" disabled selected>Where do you want to study?</option>
+            <option>United States of America</option>
+            <option>United Kingdom</option>
+            <option>Canada</option>
+            <option>Australia</option>
+            <option>Europe</option>
+          </select>
+        </div>
+        <div class="mb-2">
+          <select name="study_type" class="form-select" required>
+            <option value="" disabled selected>What do you want to study?</option>
+            <option>UG/UG Diploma</option>
+            <option>PG/PG Diploma</option>
+            <option>Doctoral Programs</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <input type="text" name="area_of_study" class="form-control" placeholder="Area of Study (e.g. Computer Science, Business, etc.)" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Register</button>
+      </form>
+      <div class="text-center mt-3">
+        Already have an account? <a href="student_login.html">Login</a>
+      </div>
+      <div class="text-center mt-3">
+        Go back to <a href="index.html">Home Page</a>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

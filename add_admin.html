@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add New Admin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f4f4f4;
+    }
+    form {
+      max-width: 400px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 4px;
+    }
+    #responseMsg {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+    .error {
+      color: red;
+    }
+    .success {
+      color: green;
+    }
+
+    /* Toast styling */
+    #toast {
+      visibility: hidden;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 16px 24px;
+      border-radius: 4px;
+      z-index: 9999;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      opacity: 0;
+      transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+    #toast.show {
+      visibility: visible;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <h2 style="text-align:center;">Add New Admin</h2>
+  <form id="addAdminForm">
+    <label>Username:</label>
+    <input type="text" name="username" required>
+
+    <label>Password:</label>
+    <input type="password" name="password" required>
+
+    <label>Confirm Password:</label>
+    <input type="password" name="confirm_password" required>
+
+    <button type="submit">Add Admin</button>
+
+    <p id="responseMsg"></p>
+    <div style="text-align:center; margin-top: 20px;">
+      <a href="admin_dashboard.html">Go Back</a>
+    </div>
+  </form>
+
+  <div id="toast">Admin added successfully!</div>
+
+  <script>
+    async function checkSession() {
+      if (!sessionStorage.getItem('admin_logged_in')) {
+        window.location.href = 'admin_login.html';
+        return;
+      }
+
+      const res = await fetch('admin_backend.php?action=is_logged_in');
+      const data = await res.json();
+
+      if (!data.logged_in) {
+        sessionStorage.removeItem('admin_logged_in');
+        window.location.href = 'admin_login.html';
+      }
+    }
+
+    checkSession();
+
+    function showToast(message) {
+      const toast = document.getElementById('toast');
+      toast.textContent = message;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000);
+    }
+
+    document.getElementById('addAdminForm').addEventListener('submit', async function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const username = form.username.value.trim();
+      const password = form.password.value;
+      const confirmPassword = form.confirm_password.value;
+      const msg = document.getElementById('responseMsg');
+
+      msg.textContent = '';
+      msg.className = '';
+
+      if (password !== confirmPassword) {
+        msg.textContent = 'Passwords do not match.';
+        msg.className = 'error';
+        return;
+      }
+
+      const formData = new FormData();
+      formData.append('action', 'insert_admin');
+      formData.append('username', username);
+      formData.append('password', password);
+
+      const response = await fetch('admin_backend.php', {
+        method: 'POST',
+        body: formData
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        msg.textContent = result.message;
+        msg.className = 'success';
+        showToast(result.message);
+        form.reset();
+      } else {
+        msg.textContent = result.error || 'Something went wrong.';
+        msg.className = 'error';
+      }
+    });
+  </script>
+
+</body>
+</html>

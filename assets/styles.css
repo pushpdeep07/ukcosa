@@ -1,0 +1,300 @@
+/* Base spacing and layout */
+body {
+  padding-top: 80px;
+  background-color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/* Responsive hero padding */
+@media (max-width: 576px) {
+  .hero {
+    padding: 60px 10px;
+  }
+}
+
+/* Card hover effects (desktop only) */
+@media (hover: hover) {
+  .services .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+}
+
+/* Footer section */
+footer {
+  background-color: #1e1e1e;
+  color: #fff;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+footer h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 6px;
+  color: #ccc;
+}
+
+footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+footer .form-control,
+footer .form-select {
+  border-radius: 0.25rem;
+  border: none;
+}
+
+footer .btn-warning {
+  font-weight: 600;
+  background-color: #f5a623;
+  border: none;
+}
+
+footer .btn-warning:hover {
+  background-color: #d48806;
+  height: 20;
+}
+
+/* Footer social icons */
+footer .bi {
+  font-size: 1.25rem;
+  transition: color 0.3s ease;
+}
+
+footer .bi:hover {
+  color: #f5a623;
+}
+
+/* Responsive logo strip */
+footer .d-flex img {
+  max-height: 40px;
+  object-fit: contain;
+}
+.fixed-img {
+    position: fixed;
+    top: 150px;
+    right: 50px;
+    z-index: 999;
+}
+
+@media (max-width: 576px) {
+  .fixed-img {
+    width: 150px;
+    height: auto;
+  }
+}
+.tmp {
+   position: fixed;
+    top: 200px;
+    left: 50px;
+    z-index: 999;
+}
+@media (max-width: 576px) {
+  .tmp {
+      top: auto;
+      bottom: 20px;
+      right: 10px;
+      left: 10px;
+      max-width: none;
+      width: auto;
+  }
+}
+.university-slider {
+  transition: transform 0.5s ease;
+  display: flex;
+}
+
+.university-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-right: 20px;
+  flex: 0 0 auto;
+}
+
+.university-card {
+  width: 180px;
+  height: 120px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+}
+.section-bg {
+  width: 100%;
+}
+
+.student-bg {
+  background-color: #ffe0e0;
+}
+
+.partner-bg {
+  background-color: #fff0cc;
+}
+
+.franchisee-bg {
+  background-color: #e0ecff;
+}
+
+.university-bg {
+  background-color: #e8e0ff;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sub-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.section-img {
+  max-width: 90%;
+  height: auto;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+@media (max-width: 768px) {
+  .section-title,
+  .sub-title {
+    text-align: center;
+  }
+
+  .section-img {
+    margin-top: 15px;
+  }
+}
+.section-bg {
+  width: 100%;
+}
+
+.white-bg {
+  background-color: #ffffff;
+}
+
+.light-bg {
+  background-color: #fff6f2;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sub-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.section-img {
+  max-width: 90%;
+  height: auto;
+}
+
+.tick-list li {
+  margin-bottom: 8px;
+  padding-left: 1.2em;
+  position: relative;
+}
+
+.tick-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #007bff;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .section-title,
+  .sub-title {
+    text-align: center;
+  }
+
+  .section-img {
+    margin-top: 15px;
+  }
+}
+.multi-img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.img-item {
+  position: absolute;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.top-img {
+  top: 0;
+  z-index: 3;
+}
+
+.mid-img {
+  top: 60px;
+  z-index: 2;
+}
+
+.bottom-img {
+  top: 120px;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .multi-img-wrapper {
+    position: relative;
+    height: auto;
+  }
+
+  .img-item {
+    position: static;
+    transform: none;
+    margin-bottom: 20px;
+  }
+}
+.image-cropper {
+  width: 450px;             /* Adjust width as needed */
+  height: 350px;            /* Same as width for round, or change for oval */
+  border-radius: 50%;       /* Makes it circular or oval depending on aspect ratio */
+  overflow: hidden;         /* Hides the overflowing part */
+  display: inline-block;
+  position: relative;
+}
+
+.image-cropper img {
+  position: absolute;
+  left: 0;                  /* Aligns the image to the left */
+  top: 0;
+  height: 100%;
+}

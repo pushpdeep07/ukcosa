@@ -1,0 +1,86 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enroll Now</title>
+  <style>
+    .enquiry-form {
+      display: none;
+      background: #f2f2f2;
+      padding: 20px;
+      border-radius: 8px;
+      margin-top: 20px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    .submit-btn {
+      background-color: orange;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <a href="#" class="btn fw-bold text-white" style="background-color: orange;" onclick="showForm()"><u>ENROLL NOW</u></a>
+
+  <div class="enquiry-form" id="enquiryForm">
+    <h2>Enquiry Form</h2>
+    <form action="submit.php" method="POST">
+      <label>Full Name *</label>
+      <input type="text" name="name" required>
+
+      <label>Email Address *</label>
+      <input type="email" name="email" required>
+
+      <label>Mobile Number *</label>
+      <input type="tel" name="mobile" required>
+
+      <label>City *</label>
+      <input type="text" name="city" required>
+
+      <label>Preferred Destination *</label>
+      <input list="destinations" name="destination" required>
+      <datalist id="destinations">
+        <option value="USA">
+        <option value="UK">
+        <option value="Canada">
+        <option value="Australia">
+        <option value="Europe">
+      </datalist>
+
+      <label>Are you looking for coaching? *</label>
+      <select name="coaching" required>
+        <option value="YES">YES</option>
+        <option value="NO">NO</option>
+      </select>
+
+      <label>Are you looking for an education loan? *</label>
+      <select name="loan" required>
+        <option value="YES">YES</option>
+        <option value="NO">NO</option>
+      </select>
+
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    function showForm() {
+      document.getElementById('enquiryForm').style.display = 'block';
+    }
+  </script>
+</body>
+</html>
